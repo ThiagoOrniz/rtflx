@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68B2037C367800CFBC570257 /* Pods_Rtflx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4367C030295A4AE3DDAE85E4 /* Pods_Rtflx.framework */; };
+		6B2AF7ED36655DC1C376076B /* Pods_RtflxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BCB5C979A73F3A6B9513DB7 /* Pods_RtflxUITests.framework */; };
+		AF59D0CC1E9C52860016D5EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */; };
 		AFEBE6681E9C4EED00A4EC32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */; };
 		AFEBE66A1E9C4EED00A4EC32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE6691E9C4EED00A4EC32 /* ViewController.swift */; };
 		AFEBE66D1E9C4EED00A4EC32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEBE66B1E9C4EED00A4EC32 /* Main.storyboard */; };
@@ -14,6 +17,7 @@
 		AFEBE6721E9C4EED00A4EC32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEBE6701E9C4EED00A4EC32 /* LaunchScreen.storyboard */; };
 		AFEBE67D1E9C4EED00A4EC32 /* RtflxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE67C1E9C4EED00A4EC32 /* RtflxTests.swift */; };
 		AFEBE6881E9C4EED00A4EC32 /* RtflxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE6871E9C4EED00A4EC32 /* RtflxUITests.swift */; };
+		EA96699F81454A090D052074 /* Pods_RtflxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D891A766D9890121147977 /* Pods_RtflxTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		082F22FB4580FF3EA6EDE44C /* Pods-Rtflx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rtflx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rtflx/Pods-Rtflx.debug.xcconfig"; sourceTree = "<group>"; };
+		2AD70616EB61574C015B178A /* Pods-Rtflx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rtflx.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rtflx/Pods-Rtflx.release.xcconfig"; sourceTree = "<group>"; };
+		4367C030295A4AE3DDAE85E4 /* Pods_Rtflx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rtflx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		465E240501860E9329136162 /* Pods-RtflxUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RtflxUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RtflxUITests/Pods-RtflxUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4BCB5C979A73F3A6B9513DB7 /* Pods_RtflxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RtflxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6160676015DA6F3A0F4CB5FF /* Pods-RtflxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RtflxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RtflxTests/Pods-RtflxTests.release.xcconfig"; sourceTree = "<group>"; };
+		65EECA786C498704421C4E2E /* Pods-RtflxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RtflxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RtflxUITests/Pods-RtflxUITests.release.xcconfig"; sourceTree = "<group>"; };
+		786A926FC5FD995B737ECF69 /* Pods-RtflxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RtflxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RtflxTests/Pods-RtflxTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AFEBE6641E9C4EED00A4EC32 /* Rtflx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rtflx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFEBE6691E9C4EED00A4EC32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +60,7 @@
 		AFEBE6831E9C4EED00A4EC32 /* RtflxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RtflxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEBE6871E9C4EED00A4EC32 /* RtflxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RtflxUITests.swift; sourceTree = "<group>"; };
 		AFEBE6891E9C4EED00A4EC32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5D891A766D9890121147977 /* Pods_RtflxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RtflxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68B2037C367800CFBC570257 /* Pods_Rtflx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA96699F81454A090D052074 /* Pods_RtflxTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +84,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B2AF7ED36655DC1C376076B /* Pods_RtflxUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CE3A4687DCE7EE5783B43B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				082F22FB4580FF3EA6EDE44C /* Pods-Rtflx.debug.xcconfig */,
+				2AD70616EB61574C015B178A /* Pods-Rtflx.release.xcconfig */,
+				786A926FC5FD995B737ECF69 /* Pods-RtflxTests.debug.xcconfig */,
+				6160676015DA6F3A0F4CB5FF /* Pods-RtflxTests.release.xcconfig */,
+				465E240501860E9329136162 /* Pods-RtflxUITests.debug.xcconfig */,
+				65EECA786C498704421C4E2E /* Pods-RtflxUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF59D0CA1E9C50880016D5EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */,
+				AFEBE6731E9C4EED00A4EC32 /* Info.plist */,
+				AFEBE6701E9C4EED00A4EC32 /* LaunchScreen.storyboard */,
+				AFEBE66E1E9C4EED00A4EC32 /* Assets.xcassets */,
+				AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		AFEBE65B1E9C4EEC00A4EC32 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +123,8 @@
 				AFEBE67B1E9C4EED00A4EC32 /* RtflxTests */,
 				AFEBE6861E9C4EED00A4EC32 /* RtflxUITests */,
 				AFEBE6651E9C4EED00A4EC32 /* Products */,
+				8CE3A4687DCE7EE5783B43B3 /* Pods */,
+				C506669C8009B4937D86B8A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +141,9 @@
 		AFEBE6661E9C4EED00A4EC32 /* Rtflx */ = {
 			isa = PBXGroup;
 			children = (
-				AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */,
+				AF59D0CA1E9C50880016D5EA /* Supporting Files */,
 				AFEBE6691E9C4EED00A4EC32 /* ViewController.swift */,
 				AFEBE66B1E9C4EED00A4EC32 /* Main.storyboard */,
-				AFEBE66E1E9C4EED00A4EC32 /* Assets.xcassets */,
-				AFEBE6701E9C4EED00A4EC32 /* LaunchScreen.storyboard */,
-				AFEBE6731E9C4EED00A4EC32 /* Info.plist */,
 			);
 			path = Rtflx;
 			sourceTree = "<group>";
@@ -125,6 +166,16 @@
 			path = RtflxUITests;
 			sourceTree = "<group>";
 		};
+		C506669C8009B4937D86B8A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4367C030295A4AE3DDAE85E4 /* Pods_Rtflx.framework */,
+				F5D891A766D9890121147977 /* Pods_RtflxTests.framework */,
+				4BCB5C979A73F3A6B9513DB7 /* Pods_RtflxUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFEBE68C1E9C4EED00A4EC32 /* Build configuration list for PBXNativeTarget "Rtflx" */;
 			buildPhases = (
+				7D0E33E8AA60F86483847C26 /* [CP] Check Pods Manifest.lock */,
 				AFEBE6601E9C4EEC00A4EC32 /* Sources */,
 				AFEBE6611E9C4EEC00A4EC32 /* Frameworks */,
 				AFEBE6621E9C4EEC00A4EC32 /* Resources */,
+				4D1FA95D0C5A747E4BD90335 /* [CP] Embed Pods Frameworks */,
+				33C74513DB4674579C448483 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFEBE68F1E9C4EED00A4EC32 /* Build configuration list for PBXNativeTarget "RtflxTests" */;
 			buildPhases = (
+				5A34D86D19F449B2CE676F2E /* [CP] Check Pods Manifest.lock */,
 				AFEBE6741E9C4EED00A4EC32 /* Sources */,
 				AFEBE6751E9C4EED00A4EC32 /* Frameworks */,
 				AFEBE6761E9C4EED00A4EC32 /* Resources */,
+				7834EF444B15608C7C06DA58 /* [CP] Embed Pods Frameworks */,
+				5D8E1B79915F30A8CF19B13C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFEBE6921E9C4EED00A4EC32 /* Build configuration list for PBXNativeTarget "RtflxUITests" */;
 			buildPhases = (
+				FD11BD69203C46A8E6BBF8A3 /* [CP] Check Pods Manifest.lock */,
 				AFEBE67F1E9C4EED00A4EC32 /* Sources */,
 				AFEBE6801E9C4EED00A4EC32 /* Frameworks */,
 				AFEBE6811E9C4EED00A4EC32 /* Resources */,
+				59BFB507F9A6452AF42B1FB1 /* [CP] Embed Pods Frameworks */,
+				49C8FB2420297DB8943E4341 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF59D0CC1E9C52860016D5EA /* GoogleService-Info.plist in Resources */,
 				AFEBE6721E9C4EED00A4EC32 /* LaunchScreen.storyboard in Resources */,
 				AFEBE66F1E9C4EED00A4EC32 /* Assets.xcassets in Resources */,
 				AFEBE66D1E9C4EED00A4EC32 /* Main.storyboard in Resources */,
@@ -256,6 +317,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33C74513DB4674579C448483 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rtflx/Pods-Rtflx-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49C8FB2420297DB8943E4341 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RtflxUITests/Pods-RtflxUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D1FA95D0C5A747E4BD90335 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rtflx/Pods-Rtflx-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59BFB507F9A6452AF42B1FB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RtflxUITests/Pods-RtflxUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A34D86D19F449B2CE676F2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D8E1B79915F30A8CF19B13C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RtflxTests/Pods-RtflxTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7834EF444B15608C7C06DA58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RtflxTests/Pods-RtflxTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D0E33E8AA60F86483847C26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD11BD69203C46A8E6BBF8A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AFEBE6601E9C4EEC00A4EC32 /* Sources */ = {
@@ -413,6 +612,7 @@
 		};
 		AFEBE68D1E9C4EED00A4EC32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 082F22FB4580FF3EA6EDE44C /* Pods-Rtflx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SVMRB674Q7;
@@ -428,6 +628,7 @@
 		};
 		AFEBE68E1E9C4EED00A4EC32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AD70616EB61574C015B178A /* Pods-Rtflx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SVMRB674Q7;
@@ -443,6 +644,7 @@
 		};
 		AFEBE6901E9C4EED00A4EC32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 786A926FC5FD995B737ECF69 /* Pods-RtflxTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -458,6 +660,7 @@
 		};
 		AFEBE6911E9C4EED00A4EC32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6160676015DA6F3A0F4CB5FF /* Pods-RtflxTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -473,6 +676,7 @@
 		};
 		AFEBE6931E9C4EED00A4EC32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 465E240501860E9329136162 /* Pods-RtflxUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = SVMRB674Q7;
@@ -487,6 +691,7 @@
 		};
 		AFEBE6941E9C4EED00A4EC32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65EECA786C498704421C4E2E /* Pods-RtflxUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = SVMRB674Q7;
@@ -518,6 +723,7 @@
 				AFEBE68E1E9C4EED00A4EC32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFEBE68F1E9C4EED00A4EC32 /* Build configuration list for PBXNativeTarget "RtflxTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +732,7 @@
 				AFEBE6911E9C4EED00A4EC32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFEBE6921E9C4EED00A4EC32 /* Build configuration list for PBXNativeTarget "RtflxUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +741,7 @@
 				AFEBE6941E9C4EED00A4EC32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
