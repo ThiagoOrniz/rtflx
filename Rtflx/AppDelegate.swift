@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import FBSDKCoreKit
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        toggleViewControllers()
+
 
         return true
     }
@@ -70,6 +74,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func toggleViewControllers(){
+        
+        FIRAuth.auth()?.addStateDidChangeListener() { (auth, user) in
+            
+            
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            if user != nil {
+                
+                
+                print("user is logged")
+                
+                let tabbar = mainStoryboard.instantiateViewController(withIdentifier: "CustomTabBarController") as! CustomTabBarController
+                
+                self.window?.rootViewController = tabbar
+                
+                
+//                let detailVC = mainStoryboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+//                navigationController = UINavigationController(rootViewController: detailVC)
+                
+                
+            } else {
+                print("user is not logged")
+                let loginVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+                
+                self.window?.rootViewController = loginVC
+
+//                navigationController = UINavigationController(rootViewController: mainVC)
+                
+            }
+            self.window?.makeKeyAndVisible()
+
+            
+//            self.window?.rootViewController = navigationController
+        }
     }
 
 

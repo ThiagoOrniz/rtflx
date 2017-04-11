@@ -10,9 +10,12 @@
 		68B2037C367800CFBC570257 /* Pods_Rtflx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4367C030295A4AE3DDAE85E4 /* Pods_Rtflx.framework */; };
 		6B2AF7ED36655DC1C376076B /* Pods_RtflxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BCB5C979A73F3A6B9513DB7 /* Pods_RtflxUITests.framework */; };
 		AF59D0CC1E9C52860016D5EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */; };
+		AF59D0D41E9C85680016D5EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF59D0D31E9C85680016D5EA /* Main.storyboard */; };
+		AF59D0D61E9C89260016D5EA /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF59D0D51E9C89260016D5EA /* Movies.storyboard */; };
+		AF59D0DA1E9C89DD0016D5EA /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59D0D91E9C89DD0016D5EA /* CustomTabBarController.swift */; };
+		AF59D0DC1E9CFC160016D5EA /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF59D0DB1E9CFC160016D5EA /* Users.storyboard */; };
 		AFEBE6681E9C4EED00A4EC32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */; };
 		AFEBE66A1E9C4EED00A4EC32 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE6691E9C4EED00A4EC32 /* LoginViewController.swift */; };
-		AFEBE66D1E9C4EED00A4EC32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEBE66B1E9C4EED00A4EC32 /* Main.storyboard */; };
 		AFEBE66F1E9C4EED00A4EC32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFEBE66E1E9C4EED00A4EC32 /* Assets.xcassets */; };
 		AFEBE6721E9C4EED00A4EC32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEBE6701E9C4EED00A4EC32 /* LaunchScreen.storyboard */; };
 		AFEBE67D1E9C4EED00A4EC32 /* RtflxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE67C1E9C4EED00A4EC32 /* RtflxTests.swift */; };
@@ -47,10 +50,13 @@
 		65EECA786C498704421C4E2E /* Pods-RtflxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RtflxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RtflxUITests/Pods-RtflxUITests.release.xcconfig"; sourceTree = "<group>"; };
 		786A926FC5FD995B737ECF69 /* Pods-RtflxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RtflxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RtflxTests/Pods-RtflxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF59D0D31E9C85680016D5EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AF59D0D51E9C89260016D5EA /* Movies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Movies.storyboard; sourceTree = "<group>"; };
+		AF59D0D91E9C89DD0016D5EA /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		AF59D0DB1E9CFC160016D5EA /* Users.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Users.storyboard; sourceTree = "<group>"; };
 		AFEBE6641E9C4EED00A4EC32 /* Rtflx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rtflx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFEBE6691E9C4EED00A4EC32 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		AFEBE66C1E9C4EED00A4EC32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFEBE66E1E9C4EED00A4EC32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFEBE6711E9C4EED00A4EC32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFEBE6731E9C4EED00A4EC32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -143,7 +149,10 @@
 			children = (
 				AF59D0CA1E9C50880016D5EA /* Supporting Files */,
 				AFEBE6691E9C4EED00A4EC32 /* LoginViewController.swift */,
-				AFEBE66B1E9C4EED00A4EC32 /* Main.storyboard */,
+				AF59D0D91E9C89DD0016D5EA /* CustomTabBarController.swift */,
+				AF59D0D31E9C85680016D5EA /* Main.storyboard */,
+				AF59D0D51E9C89260016D5EA /* Movies.storyboard */,
+				AF59D0DB1E9CFC160016D5EA /* Users.storyboard */,
 			);
 			path = Rtflx;
 			sourceTree = "<group>";
@@ -298,7 +307,9 @@
 				AF59D0CC1E9C52860016D5EA /* GoogleService-Info.plist in Resources */,
 				AFEBE6721E9C4EED00A4EC32 /* LaunchScreen.storyboard in Resources */,
 				AFEBE66F1E9C4EED00A4EC32 /* Assets.xcassets in Resources */,
-				AFEBE66D1E9C4EED00A4EC32 /* Main.storyboard in Resources */,
+				AF59D0DC1E9CFC160016D5EA /* Users.storyboard in Resources */,
+				AF59D0D41E9C85680016D5EA /* Main.storyboard in Resources */,
+				AF59D0D61E9C89260016D5EA /* Movies.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +474,7 @@
 			files = (
 				AFEBE66A1E9C4EED00A4EC32 /* LoginViewController.swift in Sources */,
 				AFEBE6681E9C4EED00A4EC32 /* AppDelegate.swift in Sources */,
+				AF59D0DA1E9C89DD0016D5EA /* CustomTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,14 +510,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AFEBE66B1E9C4EED00A4EC32 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AFEBE66C1E9C4EED00A4EC32 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AFEBE6701E9C4EED00A4EC32 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -622,7 +626,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Rtflx/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Rtflx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -642,7 +646,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Rtflx/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Rtflx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
