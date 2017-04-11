@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
         return true
     }
@@ -28,16 +31,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, open url: URL,
                      options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
         
+        let facebookHandled = FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String , annotation: [:])
+        
+        
         return GIDSignIn.sharedInstance().handle(url,
                                                  sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
-                                                 annotation: [:])
+                                                 annotation: [:]) || facebookHandled
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         
+        
+        let facebookHandled = FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication:sourceApplication , annotation: annotation)
+        
         return GIDSignIn.sharedInstance().handle(url,
                                                  sourceApplication: sourceApplication,
-                                                 annotation: annotation)
+                                                 annotation: annotation) || facebookHandled
     }
     
 
