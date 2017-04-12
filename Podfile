@@ -6,6 +6,13 @@ target 'Rtflx' do
   use_frameworks!
 
   # Pods for Rtflx
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+pod 'GoogleSignIn'
+
+pod ‘FBSDKLoginKit’
+
 
   target 'RtflxTests' do
     inherit! :search_paths
