@@ -85,16 +85,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             if user != nil {
                 
-                
-                print("user is logged")
-                
                 let tabbar = mainStoryboard.instantiateViewController(withIdentifier: "CustomTabBarController") as! CustomTabBarController
                 
                 self.window?.rootViewController = tabbar
-                
-                
-//                let detailVC = mainStoryboard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
-//                navigationController = UINavigationController(rootViewController: detailVC)
                 
                 
             } else {
@@ -102,14 +95,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let loginVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
                 
                 self.window?.rootViewController = loginVC
-
-//                navigationController = UINavigationController(rootViewController: mainVC)
                 
             }
             self.window?.makeKeyAndVisible()
 
-            
-//            self.window?.rootViewController = navigationController
         }
     }
 
