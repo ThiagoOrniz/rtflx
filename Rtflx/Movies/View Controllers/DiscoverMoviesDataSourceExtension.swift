@@ -33,4 +33,16 @@ extension DiscoverMoviesViewController: UITableViewDelegate, UITableViewDataSour
         return cell!
     }
     
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        if maximumOffset - currentOffset <= 20.0 { //20 is the limit to bottom
+            print("-------Bottom-------")
+            discoverMoviesViewModel.loadMovies()
+        }
+    }
+
+    
 }

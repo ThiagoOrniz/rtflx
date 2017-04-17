@@ -14,6 +14,8 @@ import FBSDKLoginKit
 class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate, FBSDKLoginButtonDelegate {
 
     @IBOutlet weak var facebookLoginButton: FBSDKLoginButton!
+    
+    private var loginViewModel = LoginViewModel()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +41,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                           accessToken: authentication.accessToken)
         
-        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+        FIRAuth.auth()?.signIn(with: credential) { [weak self] (user, error) in
 
             if let error = error {
                 print(error.localizedDescription)
@@ -47,12 +49,18 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
             }
             
             print(user?.displayName ?? "oi")
+            self?.loginViewModel.updateUser(user: user!)
         }
         
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        
+        do {
+            try FIRAuth.auth()?.signOut()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
@@ -64,14 +72,16 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         
         let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
         
-        FIRAuth.auth()?.signIn(with: credential) { (user, error) in
-            // ...
+        FIRAuth.auth()?.signIn(with: credential) { [weak self] (user, error) in
+
             if let error = error {
                 print(error.localizedDescription)
                 return
             }
             
             print(user?.displayName ?? "oooi")
+            self?.loginViewModel.updateUser(user: user!)
+
         }
     }
     

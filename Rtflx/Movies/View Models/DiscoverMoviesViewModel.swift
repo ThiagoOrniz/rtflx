@@ -15,6 +15,8 @@ protocol DiscoverMoviesViewModelHasUpdatedDelegate{
 class DiscoverMoviesViewModel {
     
     var delegate: DiscoverMoviesViewModelHasUpdatedDelegate?
+    var currentSegmentedIndex = 0
+    var startingValue = 0
     
     private var movies = [Movie]() {
         didSet {
@@ -23,10 +25,8 @@ class DiscoverMoviesViewModel {
     }
     
     init() {
-       _ = DiscoverMoviesFirebase.retrieveAllMovies(completion: { [weak self] (movies) in
-            self?.movies = movies
-            self?.sortBy(segmentIndex: 0)
-        })
+        currentSegmentedIndex = 0
+        loadMovies()
     }
     
     func count() -> Int {
@@ -38,7 +38,9 @@ class DiscoverMoviesViewModel {
     }
     
     func sortBy(segmentIndex: Int) {
-        switch segmentIndex {
+        currentSegmentedIndex = segmentIndex
+        
+        switch currentSegmentedIndex {
         case 0:
             movies = movies.sorted(by: {($0.rating ?? 0.0) > ($1.rating ?? 0.0)})
         case 1:
@@ -46,6 +48,19 @@ class DiscoverMoviesViewModel {
         default:
             break;
         }
+    }
+    
+    func loadMovies() {
+        
+        _ = DiscoverMoviesFirebase.retrieveMovies(from: startingValue, completion:{ [weak self] (movies) in
+            
+            self?.movies = movies
+            self?.sortBy(segmentIndex: self?.currentSegmentedIndex ?? 0)
+            self?.startingValue = self?.startingValue ?? 0 + 5
+
+        })
+        
+
     }
     
 }

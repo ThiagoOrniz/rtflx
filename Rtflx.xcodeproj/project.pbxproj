@@ -16,7 +16,6 @@
 		AF23F56B1E9DD04600B07BAF /* DiscoverMoviesDataSourceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F5681E9DD04600B07BAF /* DiscoverMoviesDataSourceExtension.swift */; };
 		AF23F56C1E9DD04600B07BAF /* DiscoverMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F5691E9DD04600B07BAF /* DiscoverMoviesViewController.swift */; };
 		AF23F56D1E9DD04600B07BAF /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F56A1E9DD04600B07BAF /* MoviesViewController.swift */; };
-		AF23F5701E9DD05600B07BAF /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF23F56F1E9DD05600B07BAF /* Movies.storyboard */; };
 		AF23F5741E9DD06B00B07BAF /* DiscoverMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F5721E9DD06B00B07BAF /* DiscoverMoviesViewModel.swift */; };
 		AF23F5751E9DD06B00B07BAF /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F5731E9DD06B00B07BAF /* MovieViewModel.swift */; };
 		AF23F5781E9DD08000B07BAF /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F5771E9DD08000B07BAF /* Movie.swift */; };
@@ -25,7 +24,9 @@
 		AF23F5801E9DD0A900B07BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF23F57E1E9DD0A900B07BAF /* Main.storyboard */; };
 		AF23F5831E9DD0C900B07BAF /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF23F5821E9DD0C900B07BAF /* Users.storyboard */; };
 		AF23F5861E9DD0DB00B07BAF /* UIImageViewFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F5851E9DD0DB00B07BAF /* UIImageViewFetcher.swift */; };
+		AF2CC2B71EA57E590067B33B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2B61EA57E590067B33B /* LoginViewModel.swift */; };
 		AF59D0CC1E9C52860016D5EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */; };
+		AFD230541EA1A74E00932E54 /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD230531EA1A74E00932E54 /* Movies.storyboard */; };
 		AFEBE6681E9C4EED00A4EC32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */; };
 		AFEBE66F1E9C4EED00A4EC32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFEBE66E1E9C4EED00A4EC32 /* Assets.xcassets */; };
 		AFEBE6721E9C4EED00A4EC32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEBE6701E9C4EED00A4EC32 /* LaunchScreen.storyboard */; };
@@ -67,7 +68,6 @@
 		AF23F5681E9DD04600B07BAF /* DiscoverMoviesDataSourceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverMoviesDataSourceExtension.swift; path = "Movies/View Controllers/DiscoverMoviesDataSourceExtension.swift"; sourceTree = "<group>"; };
 		AF23F5691E9DD04600B07BAF /* DiscoverMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverMoviesViewController.swift; path = "Movies/View Controllers/DiscoverMoviesViewController.swift"; sourceTree = "<group>"; };
 		AF23F56A1E9DD04600B07BAF /* MoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoviesViewController.swift; path = "Movies/View Controllers/MoviesViewController.swift"; sourceTree = "<group>"; };
-		AF23F56F1E9DD05600B07BAF /* Movies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Movies.storyboard; path = Movies/Views/Movies.storyboard; sourceTree = "<group>"; };
 		AF23F5721E9DD06B00B07BAF /* DiscoverMoviesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverMoviesViewModel.swift; path = "Movies/View Models/DiscoverMoviesViewModel.swift"; sourceTree = "<group>"; };
 		AF23F5731E9DD06B00B07BAF /* MovieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MovieViewModel.swift; path = "Movies/View Models/MovieViewModel.swift"; sourceTree = "<group>"; };
 		AF23F5771E9DD08000B07BAF /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = Movies/Models/Movie.swift; sourceTree = "<group>"; };
@@ -76,7 +76,9 @@
 		AF23F57E1E9DD0A900B07BAF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Main/Main.storyboard; sourceTree = "<group>"; };
 		AF23F5821E9DD0C900B07BAF /* Users.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Users.storyboard; path = Users/Users.storyboard; sourceTree = "<group>"; };
 		AF23F5851E9DD0DB00B07BAF /* UIImageViewFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageViewFetcher.swift; path = Helpers/UIImageViewFetcher.swift; sourceTree = "<group>"; };
+		AF2CC2B61EA57E590067B33B /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AFD230531EA1A74E00932E54 /* Movies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Movies.storyboard; path = Movies/Views/Movies.storyboard; sourceTree = "<group>"; };
 		AFEBE6641E9C4EED00A4EC32 /* Rtflx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rtflx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFEBE66E1E9C4EED00A4EC32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,7 +156,7 @@
 		AF23F56E1E9DD04A00B07BAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AF23F56F1E9DD05600B07BAF /* Movies.storyboard */,
+				AFD230531EA1A74E00932E54 /* Movies.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				AF23F57A1E9DD09600B07BAF /* LoginViewController.swift */,
+				AF2CC2B61EA57E590067B33B /* LoginViewModel.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -433,12 +436,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD230541EA1A74E00932E54 /* Movies.storyboard in Resources */,
 				AF23F5831E9DD0C900B07BAF /* Users.storyboard in Resources */,
 				AF59D0CC1E9C52860016D5EA /* GoogleService-Info.plist in Resources */,
 				AFEBE6721E9C4EED00A4EC32 /* LaunchScreen.storyboard in Resources */,
 				AFEBE66F1E9C4EED00A4EC32 /* Assets.xcassets in Resources */,
 				AF23F5801E9DD0A900B07BAF /* Main.storyboard in Resources */,
-				AF23F5701E9DD05600B07BAF /* Movies.storyboard in Resources */,
 				AF23F5661E9DD02000B07BAF /* MoviesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -608,6 +611,7 @@
 				AF23F5741E9DD06B00B07BAF /* DiscoverMoviesViewModel.swift in Sources */,
 				AF23F5861E9DD0DB00B07BAF /* UIImageViewFetcher.swift in Sources */,
 				AFEBE6681E9C4EED00A4EC32 /* AppDelegate.swift in Sources */,
+				AF2CC2B71EA57E590067B33B /* LoginViewModel.swift in Sources */,
 				AF23F56B1E9DD04600B07BAF /* DiscoverMoviesDataSourceExtension.swift in Sources */,
 				AF23F5781E9DD08000B07BAF /* Movie.swift in Sources */,
 				AF23F56D1E9DD04600B07BAF /* MoviesViewController.swift in Sources */,

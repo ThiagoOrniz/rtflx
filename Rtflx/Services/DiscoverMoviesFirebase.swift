@@ -11,15 +11,13 @@ import FirebaseDatabase
 
 class DiscoverMoviesFirebase {
     
-    class func retrieveAllMovies(completion: @escaping (_ movies: [Movie]) -> Void) -> FIRDatabaseHandle {
+    class func retrieveMovies(from startingValue: Int, completion: @escaping (_ movies: [Movie]) -> Void) -> FIRDatabaseHandle {
         
-//        refHandle = postRef.observe(FIRDataEventType.value, with: { (snapshot) in
-//            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
-//            // ...
-//        })
+        print(startingValue)
         
-   return FIRDatabase.database().reference().child("movies")
-            .observe(.value, with: { (snapshot) in
+    FIRDatabase.database().reference().child("movies").queryOrdered(byChild: "title")
+            .observeSingleEvent(of: .value, with: { (snapshot) in
+//            .observe(.value, with: { (snapshot) in
                 // code
                 var movies = [Movie]()
                 
@@ -48,21 +46,14 @@ class DiscoverMoviesFirebase {
 
                     }
                 }
-                
-               
-                
 
                 completion(movies)
                 
-//                for child in snapshot.children {
-//
-//
-//                }
-//                completion(snapshot)
             })
             { (error) in
                 print(error.localizedDescription)
-        }
+       }
+        return 1
     }
 
 }
