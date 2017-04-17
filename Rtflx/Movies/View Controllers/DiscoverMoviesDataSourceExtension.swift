@@ -33,6 +33,16 @@ extension DiscoverMoviesViewController: UITableViewDelegate, UITableViewDataSour
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Movies", bundle: nil)
+        let movieDetailsVC = storyBoard.instantiateViewController(withIdentifier: "MovieDetailsViewController") as! MovieDetailsViewController
+        
+        movieDetailsVC.setupMovieViewModel(movieViewModel: discoverMoviesViewModel.get(index: indexPath.row))
+        
+        self.navigationController?.pushViewController(movieDetailsVC, animated: true)
+    }
+    
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         
         let currentOffset = scrollView.contentOffset.y

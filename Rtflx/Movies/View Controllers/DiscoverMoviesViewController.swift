@@ -31,9 +31,10 @@ class DiscoverMoviesViewController: UIViewController, DiscoverMoviesViewModelHas
         discoverMoviesViewModel.sortBy(segmentIndex: sortSegmentControl.selectedSegmentIndex)
         
     }
+    
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        
-//        let movieDetailViewController = segue.destination as! MovieDetailViewController
+//        let movieDetailsViewController = segue.destination as! MovieDetailsViewController
 //        
 //        if let selectedIndexPath = discoverMoviesTableView.indexPathForSelectedRow {
 //            movieDetailViewController.setMovie(discoverMoviesViewModel.get(index: selectedIndexPath.row))

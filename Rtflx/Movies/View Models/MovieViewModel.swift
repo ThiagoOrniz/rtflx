@@ -36,4 +36,9 @@ class MovieViewModel {
         self.movie = movie
     }
     
+    func saveAsFavorite() {
+        MovieDAO().saveMovie(movie: movie)
+    }
+    
+    
 }
