@@ -13,7 +13,7 @@ protocol DiscoverUsersViewModelHasUpdatedDelegate{
 }
 
 
-class DiscoverUsersViewModel: FirebaseManagerDelegate {
+class DiscoverUsersViewModel: FirebaseManagerUsersDelegate {
     
     var delegate: DiscoverUsersViewModelHasUpdatedDelegate?
     
@@ -25,8 +25,7 @@ class DiscoverUsersViewModel: FirebaseManagerDelegate {
     }
     
     init() {
-       _ = FirebaseManager.shared
-        FirebaseManager.shared.delegate = self
+        FirebaseManager.shared.usersDelegate = self
     }
     
     func count() -> Int {
@@ -41,8 +40,5 @@ class DiscoverUsersViewModel: FirebaseManagerDelegate {
         self.users = users
     }
     
-    func didFinishUpdateFriends() {
-        
-    }
     
 }

@@ -42,6 +42,9 @@
 		AF2CC2DD1EA5A3AC0067B33B /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2DC1EA5A3AC0067B33B /* UserDetailsViewController.swift */; };
 		AF2CC2DF1EA5A9D00067B33B /* UsersFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2DE1EA5A9D00067B33B /* UsersFirebase.swift */; };
 		AF2CC2E11EA5AA0E0067B33B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2E01EA5AA0E0067B33B /* FirebaseManager.swift */; };
+		AF2CC2E31EA5BAEC0067B33B /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2E21EA5BAEC0067B33B /* FriendsViewController.swift */; };
+		AF2CC2E51EA5BB260067B33B /* FriendsDataSourceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2E41EA5BB260067B33B /* FriendsDataSourceExtensions.swift */; };
+		AF2CC2E71EA5BB3F0067B33B /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2E61EA5BB3F0067B33B /* FriendsViewModel.swift */; };
 		AF59D0CC1E9C52860016D5EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */; };
 		AFD230541EA1A74E00932E54 /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD230531EA1A74E00932E54 /* Movies.storyboard */; };
 		AFEBE6681E9C4EED00A4EC32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */; };
@@ -111,6 +114,9 @@
 		AF2CC2DC1EA5A3AC0067B33B /* UserDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDetailsViewController.swift; path = "Users/View Controllers/UserDetailsViewController.swift"; sourceTree = "<group>"; };
 		AF2CC2DE1EA5A9D00067B33B /* UsersFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsersFirebase.swift; path = Services/UsersFirebase.swift; sourceTree = "<group>"; };
 		AF2CC2E01EA5AA0E0067B33B /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseManager.swift; path = Services/FirebaseManager.swift; sourceTree = "<group>"; };
+		AF2CC2E21EA5BAEC0067B33B /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = "Users/View Controllers/FriendsViewController.swift"; sourceTree = "<group>"; };
+		AF2CC2E41EA5BB260067B33B /* FriendsDataSourceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsDataSourceExtensions.swift; path = "Users/View Controllers/FriendsDataSourceExtensions.swift"; sourceTree = "<group>"; };
+		AF2CC2E61EA5BB3F0067B33B /* FriendsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewModel.swift; path = "Users/View Models/FriendsViewModel.swift"; sourceTree = "<group>"; };
 		AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AFD230531EA1A74E00932E54 /* Movies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Movies.storyboard; path = Movies/Views/Movies.storyboard; sourceTree = "<group>"; };
 		AFEBE6641E9C4EED00A4EC32 /* Rtflx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rtflx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +290,8 @@
 				AF2CC2CA1EA59B0F0067B33B /* DiscoverUsersViewController.swift */,
 				AF2CC2D21EA59BB50067B33B /* DiscoverUsersDataSourceExtensions.swift */,
 				AF2CC2DC1EA5A3AC0067B33B /* UserDetailsViewController.swift */,
+				AF2CC2E21EA5BAEC0067B33B /* FriendsViewController.swift */,
+				AF2CC2E41EA5BB260067B33B /* FriendsDataSourceExtensions.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -302,6 +310,7 @@
 			children = (
 				AF2CC2D51EA59C950067B33B /* DiscoverUsersViewModel.swift */,
 				AF2CC2DA1EA5A1C40067B33B /* UserViewModel.swift */,
+				AF2CC2E61EA5BB3F0067B33B /* FriendsViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -699,10 +708,12 @@
 			files = (
 				AF2CC2D91EA5A10D0067B33B /* User.swift in Sources */,
 				AF23F57B1E9DD09600B07BAF /* LoginViewController.swift in Sources */,
+				AF2CC2E71EA5BB3F0067B33B /* FriendsViewModel.swift in Sources */,
 				AF23F5621E9DCFBD00B07BAF /* RetrieveMovie.swift in Sources */,
 				AF23F57F1E9DD0A900B07BAF /* CustomTabBarController.swift in Sources */,
 				AF2CC2C31EA58F9A0067B33B /* FavoriteMoviesFirebase.swift in Sources */,
 				AF23F5741E9DD06B00B07BAF /* DiscoverMoviesViewModel.swift in Sources */,
+				AF2CC2E51EA5BB260067B33B /* FriendsDataSourceExtensions.swift in Sources */,
 				AF23F5861E9DD0DB00B07BAF /* UIImageViewFetcher.swift in Sources */,
 				AF2CC2D31EA59BB50067B33B /* DiscoverUsersDataSourceExtensions.swift in Sources */,
 				AF2CC2CF1EA59B730067B33B /* UsersTableViewCell.swift in Sources */,
@@ -722,6 +733,7 @@
 				AF2CC2CB1EA59B0F0067B33B /* DiscoverUsersViewController.swift in Sources */,
 				AF2CC2BB1EA589630067B33B /* MovieDAO.swift in Sources */,
 				AF2CC2BF1EA58DE80067B33B /* MyFavoritesDataSourceExtension.swift in Sources */,
+				AF2CC2E31EA5BAEC0067B33B /* FriendsViewController.swift in Sources */,
 				AF23F5651E9DD02000B07BAF /* MoviesTableViewCell.swift in Sources */,
 				AF2CC2BD1EA58DC30067B33B /* MyFavoritesViewController.swift in Sources */,
 				AF2CC2DB1EA5A1C40067B33B /* UserViewModel.swift in Sources */,

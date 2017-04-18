@@ -85,6 +85,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             if user != nil {
                 
+                _ = FirebaseManager.shared
+
                 let tabbar = mainStoryboard.instantiateViewController(withIdentifier: "CustomTabBarController") as! CustomTabBarController
                 
                 self.window?.rootViewController = tabbar

@@ -8,9 +8,12 @@
 
 import Foundation
 
-protocol FirebaseManagerDelegate{
+protocol FirebaseManagerUsersDelegate{
     func didFinishUpdatingUsers(users: [User])
-    func didFinishUpdateFriends()
+}
+
+protocol FirebaseManagerFriendsDelegate{
+    func didFinishUpdatingFriends(friends: [User])
 }
 
 class FirebaseManager {
@@ -19,8 +22,9 @@ class FirebaseManager {
     private var users = [User]()
     private var friends = [User]()
     
-    var delegate: FirebaseManagerDelegate?
-    
+    var usersDelegate: FirebaseManagerUsersDelegate?
+    var friendsDelegate: FirebaseManagerFriendsDelegate?
+
 
     
     private init() {
@@ -29,7 +33,7 @@ class FirebaseManager {
             self?.users = users
             
             self?.retrieveFriends()
-            self?.delegate?.didFinishUpdatingUsers(users: users)
+            self?.usersDelegate?.didFinishUpdatingUsers(users: users)
         }
     }
     
@@ -43,6 +47,7 @@ class FirebaseManager {
                 }
                 })!
             
+            self?.friendsDelegate?.didFinishUpdatingFriends(friends: (self?.friends)!)
         }
     }
 }

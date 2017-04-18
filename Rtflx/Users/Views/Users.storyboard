@@ -14,7 +14,7 @@
                 <navigationController id="a1L-Vv-KyC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Users" image="ic_placeholder" id="D6q-DI-AHG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cvJ-cY-2ou">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cvJ-cY-2ou">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -129,13 +129,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="483"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FCf-PO-88O">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FCf-PO-88O">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="483"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FCf-PO-88O" secondAttribute="trailing" id="4OA-Qj-TUt"/>
+                            <constraint firstItem="FCf-PO-88O" firstAttribute="top" secondItem="SbO-0e-Bac" secondAttribute="top" id="aHZ-at-V4S"/>
+                            <constraint firstItem="FCf-PO-88O" firstAttribute="leading" secondItem="SbO-0e-Bac" secondAttribute="leading" id="bSm-D6-nvC"/>
+                            <constraint firstAttribute="bottom" secondItem="FCf-PO-88O" secondAttribute="bottom" id="pSJ-Kt-dPs"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="usersTableView" destination="FCf-PO-88O" id="WnQ-Eb-E4M"/>
@@ -145,28 +150,34 @@
             </objects>
             <point key="canvasLocation" x="1967" y="1377"/>
         </scene>
-        <!--View Controller-->
+        <!--Friends View Controller-->
         <scene sceneID="rrD-6p-snO">
             <objects>
-                <viewController id="0bq-YU-xJ1" sceneMemberID="viewController">
+                <viewController id="0bq-YU-xJ1" customClass="FriendsViewController" customModule="Rtflx" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g9y-IY-mUr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="483"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsb-pn-i64">
-                                <rect key="frame" x="60" y="57" width="57" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RO7-nO-66n">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="RO7-nO-66n" secondAttribute="bottom" id="2rp-av-wsK"/>
+                            <constraint firstAttribute="trailing" secondItem="RO7-nO-66n" secondAttribute="trailing" id="4oj-Gx-Zai"/>
+                            <constraint firstItem="RO7-nO-66n" firstAttribute="leading" secondItem="g9y-IY-mUr" secondAttribute="leading" id="IsN-hZ-OaU"/>
+                            <constraint firstItem="RO7-nO-66n" firstAttribute="top" secondItem="g9y-IY-mUr" secondAttribute="top" id="VQF-bU-rcz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="friendsTableView" destination="RO7-nO-66n" id="diq-zC-tNK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xeb-VT-X5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2638" y="1377"/>
+            <point key="canvasLocation" x="2637.5999999999999" y="1376.7616191904049"/>
         </scene>
     </scenes>
     <resources>
