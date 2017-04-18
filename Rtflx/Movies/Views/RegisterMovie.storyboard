@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zQY-Bt-u8t">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New-->
+        <scene sceneID="rB0-aT-O5X">
+            <objects>
+                <navigationController id="zQY-Bt-u8t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="New" image="ic_placeholder" id="FrA-bf-PhH"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="5ym-sT-n7o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bkh-rO-4cW" kind="relationship" relationship="rootViewController" id="GkS-q9-4Cb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpm-Lg-b2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="832"/>
+        </scene>
+        <!--Register Movie View Controller-->
+        <scene sceneID="6Eh-V2-1C4">
+            <objects>
+                <viewController storyboardIdentifier="RegisterMovieViewController" id="bkh-rO-4cW" customClass="RegisterMovieViewController" customModule="Rtflx" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B5F-i6-7ct"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Ho-gK-Y3a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c33-9p-lvt">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8XW-gX-iSl">
+                                <rect key="frame" x="0.0" y="-60" width="375" height="300"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="tWC-rk-5JD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8XW-gX-iSl" firstAttribute="top" secondItem="B5F-i6-7ct" secondAttribute="bottom" constant="-60" id="Crd-dT-jmf"/>
+                            <constraint firstItem="8XW-gX-iSl" firstAttribute="leading" secondItem="c33-9p-lvt" secondAttribute="leading" id="azz-Sw-WSc"/>
+                            <constraint firstAttribute="trailing" secondItem="8XW-gX-iSl" secondAttribute="trailing" id="sjt-XV-nWz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eCa-oK-z7T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Xa-m6-yJ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1748" y="831.63418290854577"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_placeholder" width="32" height="32"/>
+    </resources>
+</document>

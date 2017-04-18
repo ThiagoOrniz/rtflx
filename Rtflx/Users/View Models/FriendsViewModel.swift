@@ -25,6 +25,7 @@ class FriendsViewModel: FirebaseManagerFriendsDelegate {
     
     init() {
         FirebaseManager.shared.friendsDelegate = self
+        FirebaseManager.shared.getFriends()
     }
     
     func count() -> Int {

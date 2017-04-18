@@ -74,6 +74,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="yD4-Qg-82l" kind="relationship" relationship="viewControllers" id="rUa-yd-78d"/>
+                        <segue destination="tNM-ha-AdS" kind="relationship" relationship="viewControllers" id="Pf8-1a-FLn"/>
                         <segue destination="v6X-iy-YSy" kind="relationship" relationship="viewControllers" id="D8Q-qx-3rD"/>
                     </connections>
                 </tabBarController>
@@ -99,7 +100,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQo-Gh-Brq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1184" y="412"/>
+            <point key="canvasLocation" x="1242" y="412"/>
+        </scene>
+        <!--RegisterMovie-->
+        <scene sceneID="BI4-N8-9C3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RegisterMovie" id="tNM-ha-AdS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="4bd-gX-5gV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fla-8g-Eia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="412"/>
         </scene>
     </scenes>
 </document>

@@ -26,6 +26,7 @@ class DiscoverUsersViewModel: FirebaseManagerUsersDelegate {
     
     init() {
         FirebaseManager.shared.usersDelegate = self
+        FirebaseManager.shared.getUsers()
     }
     
     func count() -> Int {

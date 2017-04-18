@@ -22,7 +22,7 @@ class DiscoverUsersViewController: UIViewController, DiscoverUsersViewModelHasUp
         discoverUsersViewModel.delegate = self
         
         usersTableView.rowHeight = UITableViewAutomaticDimension
-        usersTableView.estimatedRowHeight = 115
+        usersTableView.estimatedRowHeight = 80
     }
     
     func discoverUsersViewModelHasUpdated() {

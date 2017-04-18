@@ -25,9 +25,26 @@ class FirebaseManager {
     var usersDelegate: FirebaseManagerUsersDelegate?
     var friendsDelegate: FirebaseManagerFriendsDelegate?
 
-
-    
     private init() {
+        
+        retrieveUsers()
+    }
+    
+     func getUsers() {
+        
+        if users.count > 0 {
+            retrieveUsers()
+        }
+    }
+    
+     func getFriends() {
+        
+        if friends.count > 0 {
+            retrieveFriends()
+        }
+    }
+    
+    private func retrieveUsers() {
         
         _ = UsersFirebase().retrieveUsers { [weak self](users) in
             self?.users = users
@@ -36,7 +53,6 @@ class FirebaseManager {
             self?.usersDelegate?.didFinishUpdatingUsers(users: users)
         }
     }
-    
     private func retrieveFriends() {
         
         _ = UsersFirebase().retrieveFriends { [weak self](keys) in

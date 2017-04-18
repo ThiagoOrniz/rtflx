@@ -45,6 +45,9 @@
 		AF2CC2E31EA5BAEC0067B33B /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2E21EA5BAEC0067B33B /* FriendsViewController.swift */; };
 		AF2CC2E51EA5BB260067B33B /* FriendsDataSourceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2E41EA5BB260067B33B /* FriendsDataSourceExtensions.swift */; };
 		AF2CC2E71EA5BB3F0067B33B /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2E61EA5BB3F0067B33B /* FriendsViewModel.swift */; };
+		AF2CC2E91EA5BED60067B33B /* RegisterMovie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2CC2E81EA5BED60067B33B /* RegisterMovie.storyboard */; };
+		AF2CC2EB1EA5BFF30067B33B /* RegisterMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2EA1EA5BFF30067B33B /* RegisterMovieViewController.swift */; };
+		AF2CC2ED1EA5C17D0067B33B /* ColorsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2EC1EA5C17D0067B33B /* ColorsExtensions.swift */; };
 		AF59D0CC1E9C52860016D5EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */; };
 		AFD230541EA1A74E00932E54 /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD230531EA1A74E00932E54 /* Movies.storyboard */; };
 		AFEBE6681E9C4EED00A4EC32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */; };
@@ -117,6 +120,9 @@
 		AF2CC2E21EA5BAEC0067B33B /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewController.swift; path = "Users/View Controllers/FriendsViewController.swift"; sourceTree = "<group>"; };
 		AF2CC2E41EA5BB260067B33B /* FriendsDataSourceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsDataSourceExtensions.swift; path = "Users/View Controllers/FriendsDataSourceExtensions.swift"; sourceTree = "<group>"; };
 		AF2CC2E61EA5BB3F0067B33B /* FriendsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendsViewModel.swift; path = "Users/View Models/FriendsViewModel.swift"; sourceTree = "<group>"; };
+		AF2CC2E81EA5BED60067B33B /* RegisterMovie.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegisterMovie.storyboard; path = Movies/Views/RegisterMovie.storyboard; sourceTree = "<group>"; };
+		AF2CC2EA1EA5BFF30067B33B /* RegisterMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterMovieViewController.swift; path = "Movies/View Controllers/RegisterMovieViewController.swift"; sourceTree = "<group>"; };
+		AF2CC2EC1EA5C17D0067B33B /* ColorsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorsExtensions.swift; path = Helpers/ColorsExtensions.swift; sourceTree = "<group>"; };
 		AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AFD230531EA1A74E00932E54 /* Movies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Movies.storyboard; path = Movies/Views/Movies.storyboard; sourceTree = "<group>"; };
 		AFEBE6641E9C4EED00A4EC32 /* Rtflx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rtflx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +202,7 @@
 				AF2CC2B81EA584A50067B33B /* MovieDetailsViewController.swift */,
 				AF2CC2BC1EA58DC30067B33B /* MyFavoritesViewController.swift */,
 				AF2CC2BE1EA58DE80067B33B /* MyFavoritesDataSourceExtension.swift */,
+				AF2CC2EA1EA5BFF30067B33B /* RegisterMovieViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -203,6 +210,7 @@
 		AF23F56E1E9DD04A00B07BAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AF2CC2E81EA5BED60067B33B /* RegisterMovie.storyboard */,
 				AFD230531EA1A74E00932E54 /* Movies.storyboard */,
 			);
 			name = Views;
@@ -260,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				AF23F5851E9DD0DB00B07BAF /* UIImageViewFetcher.swift */,
+				AF2CC2EC1EA5C17D0067B33B /* ColorsExtensions.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -544,6 +553,7 @@
 				AFEBE66F1E9C4EED00A4EC32 /* Assets.xcassets in Resources */,
 				AF23F5801E9DD0A900B07BAF /* Main.storyboard in Resources */,
 				AF23F5661E9DD02000B07BAF /* MoviesTableViewCell.xib in Resources */,
+				AF2CC2E91EA5BED60067B33B /* RegisterMovie.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +736,7 @@
 				AF2CC2D61EA59C950067B33B /* DiscoverUsersViewModel.swift in Sources */,
 				AF23F56B1E9DD04600B07BAF /* DiscoverMoviesDataSourceExtension.swift in Sources */,
 				AF23F5781E9DD08000B07BAF /* Movie.swift in Sources */,
+				AF2CC2EB1EA5BFF30067B33B /* RegisterMovieViewController.swift in Sources */,
 				AF23F56D1E9DD04600B07BAF /* MoviesViewController.swift in Sources */,
 				AF2CC2DD1EA5A3AC0067B33B /* UserDetailsViewController.swift in Sources */,
 				AF23F5611E9DCFBD00B07BAF /* DiscoverMoviesFirebase.swift in Sources */,
@@ -736,6 +747,7 @@
 				AF2CC2E31EA5BAEC0067B33B /* FriendsViewController.swift in Sources */,
 				AF23F5651E9DD02000B07BAF /* MoviesTableViewCell.swift in Sources */,
 				AF2CC2BD1EA58DC30067B33B /* MyFavoritesViewController.swift in Sources */,
+				AF2CC2ED1EA5C17D0067B33B /* ColorsExtensions.swift in Sources */,
 				AF2CC2DB1EA5A1C40067B33B /* UserViewModel.swift in Sources */,
 				AF2CC2DF1EA5A9D00067B33B /* UsersFirebase.swift in Sources */,
 				AF23F56C1E9DD04600B07BAF /* DiscoverMoviesViewController.swift in Sources */,

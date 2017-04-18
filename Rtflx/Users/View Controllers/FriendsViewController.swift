@@ -22,7 +22,7 @@ class FriendsViewController: UIViewController, FriendsViewModelHasUpdatedDelegat
         friendsViewModel.delegate = self
         
         friendsTableView.rowHeight = UITableViewAutomaticDimension
-        friendsTableView.estimatedRowHeight = 115
+        friendsTableView.estimatedRowHeight = 80
     }
     
     func friendsViewModelHasUpdated() {
