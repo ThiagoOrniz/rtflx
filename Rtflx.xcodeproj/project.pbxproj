@@ -22,7 +22,6 @@
 		AF23F57B1E9DD09600B07BAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F57A1E9DD09600B07BAF /* LoginViewController.swift */; };
 		AF23F57F1E9DD0A900B07BAF /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F57D1E9DD0A900B07BAF /* CustomTabBarController.swift */; };
 		AF23F5801E9DD0A900B07BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF23F57E1E9DD0A900B07BAF /* Main.storyboard */; };
-		AF23F5831E9DD0C900B07BAF /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF23F5821E9DD0C900B07BAF /* Users.storyboard */; };
 		AF23F5861E9DD0DB00B07BAF /* UIImageViewFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF23F5851E9DD0DB00B07BAF /* UIImageViewFetcher.swift */; };
 		AF2CC2B71EA57E590067B33B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2B61EA57E590067B33B /* LoginViewModel.swift */; };
 		AF2CC2B91EA584A50067B33B /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2B81EA584A50067B33B /* MovieDetailsViewController.swift */; };
@@ -31,6 +30,13 @@
 		AF2CC2BF1EA58DE80067B33B /* MyFavoritesDataSourceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2BE1EA58DE80067B33B /* MyFavoritesDataSourceExtension.swift */; };
 		AF2CC2C11EA58EF20067B33B /* FavoriteMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2C01EA58EF20067B33B /* FavoriteMoviesViewModel.swift */; };
 		AF2CC2C31EA58F9A0067B33B /* FavoriteMoviesFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2C21EA58F9A0067B33B /* FavoriteMoviesFirebase.swift */; };
+		AF2CC2C51EA599060067B33B /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2CC2C41EA599060067B33B /* Users.storyboard */; };
+		AF2CC2C91EA59A360067B33B /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2C81EA59A360067B33B /* UsersViewController.swift */; };
+		AF2CC2CB1EA59B0F0067B33B /* DiscoverUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2CA1EA59B0F0067B33B /* DiscoverUsersViewController.swift */; };
+		AF2CC2CF1EA59B730067B33B /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2CD1EA59B730067B33B /* UsersTableViewCell.swift */; };
+		AF2CC2D01EA59B730067B33B /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2CC2CE1EA59B730067B33B /* UsersTableViewCell.xib */; };
+		AF2CC2D31EA59BB50067B33B /* DiscoverUsersDataSourceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2D21EA59BB50067B33B /* DiscoverUsersDataSourceExtensions.swift */; };
+		AF2CC2D61EA59C950067B33B /* DiscoverUsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2D51EA59C950067B33B /* DiscoverUsersViewModel.swift */; };
 		AF59D0CC1E9C52860016D5EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */; };
 		AFD230541EA1A74E00932E54 /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD230531EA1A74E00932E54 /* Movies.storyboard */; };
 		AFEBE6681E9C4EED00A4EC32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */; };
@@ -80,7 +86,6 @@
 		AF23F57A1E9DD09600B07BAF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login/LoginViewController.swift; sourceTree = "<group>"; };
 		AF23F57D1E9DD0A900B07BAF /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTabBarController.swift; path = Main/CustomTabBarController.swift; sourceTree = "<group>"; };
 		AF23F57E1E9DD0A900B07BAF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Main/Main.storyboard; sourceTree = "<group>"; };
-		AF23F5821E9DD0C900B07BAF /* Users.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Users.storyboard; path = Users/Users.storyboard; sourceTree = "<group>"; };
 		AF23F5851E9DD0DB00B07BAF /* UIImageViewFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageViewFetcher.swift; path = Helpers/UIImageViewFetcher.swift; sourceTree = "<group>"; };
 		AF2CC2B61EA57E590067B33B /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AF2CC2B81EA584A50067B33B /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +94,13 @@
 		AF2CC2BE1EA58DE80067B33B /* MyFavoritesDataSourceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyFavoritesDataSourceExtension.swift; path = "Movies/View Controllers/MyFavoritesDataSourceExtension.swift"; sourceTree = "<group>"; };
 		AF2CC2C01EA58EF20067B33B /* FavoriteMoviesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteMoviesViewModel.swift; path = "Movies/View Models/FavoriteMoviesViewModel.swift"; sourceTree = "<group>"; };
 		AF2CC2C21EA58F9A0067B33B /* FavoriteMoviesFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteMoviesFirebase.swift; path = Services/FavoriteMoviesFirebase.swift; sourceTree = "<group>"; };
+		AF2CC2C41EA599060067B33B /* Users.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Users.storyboard; path = Users/Views/Users.storyboard; sourceTree = "<group>"; };
+		AF2CC2C81EA59A360067B33B /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsersViewController.swift; path = "Users/View Controllers/UsersViewController.swift"; sourceTree = "<group>"; };
+		AF2CC2CA1EA59B0F0067B33B /* DiscoverUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverUsersViewController.swift; path = "Users/View Controllers/DiscoverUsersViewController.swift"; sourceTree = "<group>"; };
+		AF2CC2CD1EA59B730067B33B /* UsersTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsersTableViewCell.swift; path = Users/Cells/UsersTableViewCell.swift; sourceTree = "<group>"; };
+		AF2CC2CE1EA59B730067B33B /* UsersTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UsersTableViewCell.xib; path = Users/Cells/UsersTableViewCell.xib; sourceTree = "<group>"; };
+		AF2CC2D21EA59BB50067B33B /* DiscoverUsersDataSourceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverUsersDataSourceExtensions.swift; path = "Users/View Controllers/DiscoverUsersDataSourceExtensions.swift"; sourceTree = "<group>"; };
+		AF2CC2D51EA59C950067B33B /* DiscoverUsersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverUsersViewModel.swift; path = "Users/View Models/DiscoverUsersViewModel.swift"; sourceTree = "<group>"; };
 		AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AFD230531EA1A74E00932E54 /* Movies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Movies.storyboard; path = Movies/Views/Movies.storyboard; sourceTree = "<group>"; };
 		AFEBE6641E9C4EED00A4EC32 /* Rtflx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rtflx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,7 +229,10 @@
 		AF23F5811E9DD0B300B07BAF /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				AF23F5821E9DD0C900B07BAF /* Users.storyboard */,
+				AF2CC2D41EA59C740067B33B /* View Models */,
+				AF2CC2CC1EA59B4A0067B33B /* Cells */,
+				AF2CC2C71EA59A120067B33B /* View Controllers */,
+				AF2CC2C61EA599110067B33B /* Views */,
 			);
 			name = Users;
 			sourceTree = "<group>";
@@ -239,6 +254,41 @@
 				AF23F5811E9DD0B300B07BAF /* Users */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		AF2CC2C61EA599110067B33B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF2CC2C41EA599060067B33B /* Users.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		AF2CC2C71EA59A120067B33B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF2CC2C81EA59A360067B33B /* UsersViewController.swift */,
+				AF2CC2CA1EA59B0F0067B33B /* DiscoverUsersViewController.swift */,
+				AF2CC2D21EA59BB50067B33B /* DiscoverUsersDataSourceExtensions.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AF2CC2CC1EA59B4A0067B33B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AF2CC2CD1EA59B730067B33B /* UsersTableViewCell.swift */,
+				AF2CC2CE1EA59B730067B33B /* UsersTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		AF2CC2D41EA59C740067B33B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF2CC2D51EA59C950067B33B /* DiscoverUsersViewModel.swift */,
+			);
+			name = "View Models";
 			sourceTree = "<group>";
 		};
 		AF59D0CA1E9C50880016D5EA /* Supporting Files */ = {
@@ -454,10 +504,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2CC2C51EA599060067B33B /* Users.storyboard in Resources */,
 				AFD230541EA1A74E00932E54 /* Movies.storyboard in Resources */,
-				AF23F5831E9DD0C900B07BAF /* Users.storyboard in Resources */,
 				AF59D0CC1E9C52860016D5EA /* GoogleService-Info.plist in Resources */,
 				AFEBE6721E9C4EED00A4EC32 /* LaunchScreen.storyboard in Resources */,
+				AF2CC2D01EA59B730067B33B /* UsersTableViewCell.xib in Resources */,
 				AFEBE66F1E9C4EED00A4EC32 /* Assets.xcassets in Resources */,
 				AF23F5801E9DD0A900B07BAF /* Main.storyboard in Resources */,
 				AF23F5661E9DD02000B07BAF /* MoviesTableViewCell.xib in Resources */,
@@ -629,15 +680,20 @@
 				AF2CC2C31EA58F9A0067B33B /* FavoriteMoviesFirebase.swift in Sources */,
 				AF23F5741E9DD06B00B07BAF /* DiscoverMoviesViewModel.swift in Sources */,
 				AF23F5861E9DD0DB00B07BAF /* UIImageViewFetcher.swift in Sources */,
+				AF2CC2D31EA59BB50067B33B /* DiscoverUsersDataSourceExtensions.swift in Sources */,
+				AF2CC2CF1EA59B730067B33B /* UsersTableViewCell.swift in Sources */,
 				AF2CC2B91EA584A50067B33B /* MovieDetailsViewController.swift in Sources */,
 				AFEBE6681E9C4EED00A4EC32 /* AppDelegate.swift in Sources */,
 				AF2CC2B71EA57E590067B33B /* LoginViewModel.swift in Sources */,
 				AF2CC2C11EA58EF20067B33B /* FavoriteMoviesViewModel.swift in Sources */,
+				AF2CC2C91EA59A360067B33B /* UsersViewController.swift in Sources */,
+				AF2CC2D61EA59C950067B33B /* DiscoverUsersViewModel.swift in Sources */,
 				AF23F56B1E9DD04600B07BAF /* DiscoverMoviesDataSourceExtension.swift in Sources */,
 				AF23F5781E9DD08000B07BAF /* Movie.swift in Sources */,
 				AF23F56D1E9DD04600B07BAF /* MoviesViewController.swift in Sources */,
 				AF23F5611E9DCFBD00B07BAF /* DiscoverMoviesFirebase.swift in Sources */,
 				AF23F5751E9DD06B00B07BAF /* MovieViewModel.swift in Sources */,
+				AF2CC2CB1EA59B0F0067B33B /* DiscoverUsersViewController.swift in Sources */,
 				AF2CC2BB1EA589630067B33B /* MovieDAO.swift in Sources */,
 				AF2CC2BF1EA58DE80067B33B /* MyFavoritesDataSourceExtension.swift in Sources */,
 				AF23F5651E9DD02000B07BAF /* MoviesTableViewCell.swift in Sources */,

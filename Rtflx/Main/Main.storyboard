@@ -74,22 +74,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="yD4-Qg-82l" kind="relationship" relationship="viewControllers" id="rUa-yd-78d"/>
-                        <segue destination="cUs-jq-MYx" kind="relationship" relationship="viewControllers" id="koV-2R-feM"/>
+                        <segue destination="v6X-iy-YSy" kind="relationship" relationship="viewControllers" id="D8Q-qx-3rD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H99-Sd-6cg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="996" y="-7"/>
-        </scene>
-        <!--Users-->
-        <scene sceneID="Itn-LC-dDz">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Users" id="cUs-jq-MYx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Users" image="google.png" selectedImage="ic_placeholder" id="vQ3-VW-y5Y"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YuY-cE-jHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1219" y="403"/>
         </scene>
         <!--Movies-->
         <scene sceneID="C9I-11-7wL">
@@ -99,11 +89,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1b-Kt-btS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="735" y="743"/>
+            <point key="canvasLocation" x="738" y="412"/>
+        </scene>
+        <!--Users-->
+        <scene sceneID="Mgb-hJ-a6a">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Users" id="v6X-iy-YSy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="lYp-HP-cfG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MQo-Gh-Brq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1184" y="412"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="google.png" width="18" height="18"/>
-        <image name="ic_placeholder" width="32" height="32"/>
-    </resources>
 </document>
