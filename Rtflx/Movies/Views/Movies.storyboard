@@ -72,13 +72,13 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWL-3X-0nu">
-                                <rect key="frame" x="0.0" y="124" width="375" height="543"/>
+                                <rect key="frame" x="0.0" y="124" width="375" height="494"/>
                                 <connections>
                                     <segue destination="F9U-Gd-e9B" kind="embed" id="ZTf-6z-mf9"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMi-tx-rSv">
-                                <rect key="frame" x="0.0" y="124" width="375" height="543"/>
+                                <rect key="frame" x="0.0" y="124" width="375" height="494"/>
                                 <connections>
                                     <segue destination="WBt-bj-le5" kind="embed" id="MsI-Fv-pcR"/>
                                 </connections>
@@ -88,18 +88,18 @@
                         <constraints>
                             <constraint firstItem="gWL-3X-0nu" firstAttribute="leading" secondItem="hcI-09-9s2" secondAttribute="leading" id="1bL-6j-31B"/>
                             <constraint firstAttribute="trailing" secondItem="CKP-xB-XTX" secondAttribute="trailing" id="2gx-Nr-aUc"/>
+                            <constraint firstItem="F0V-ul-Zx0" firstAttribute="top" secondItem="zMi-tx-rSv" secondAttribute="bottom" id="2q1-hV-4ba"/>
+                            <constraint firstItem="F0V-ul-Zx0" firstAttribute="top" secondItem="gWL-3X-0nu" secondAttribute="bottom" id="4z0-NI-UVz"/>
                             <constraint firstItem="gWL-3X-0nu" firstAttribute="top" secondItem="CKP-xB-XTX" secondAttribute="bottom" id="EbK-Gq-SuD"/>
                             <constraint firstItem="CKP-xB-XTX" firstAttribute="leading" secondItem="mC7-7M-a7O" secondAttribute="trailing" id="Kus-rL-6lU"/>
                             <constraint firstItem="zMi-tx-rSv" firstAttribute="top" secondItem="CKP-xB-XTX" secondAttribute="bottom" id="P3b-A2-2Yu"/>
                             <constraint firstItem="mC7-7M-a7O" firstAttribute="leading" secondItem="hcI-09-9s2" secondAttribute="leading" id="QYu-Lv-C0a"/>
                             <constraint firstAttribute="trailing" secondItem="zMi-tx-rSv" secondAttribute="trailing" id="YCu-DB-Egl"/>
-                            <constraint firstAttribute="bottom" secondItem="zMi-tx-rSv" secondAttribute="bottom" id="b5G-IP-JgE"/>
                             <constraint firstItem="mC7-7M-a7O" firstAttribute="width" secondItem="CKP-xB-XTX" secondAttribute="width" id="cZe-N5-5ba"/>
                             <constraint firstItem="zMi-tx-rSv" firstAttribute="leading" secondItem="hcI-09-9s2" secondAttribute="leading" id="f9w-Kr-5pV"/>
                             <constraint firstItem="mC7-7M-a7O" firstAttribute="top" secondItem="asA-EY-Y5L" secondAttribute="bottom" id="fun-2B-bWF"/>
                             <constraint firstItem="CKP-xB-XTX" firstAttribute="top" secondItem="asA-EY-Y5L" secondAttribute="bottom" id="h33-LG-Qjz"/>
                             <constraint firstAttribute="trailing" secondItem="gWL-3X-0nu" secondAttribute="trailing" id="j1y-39-GiR"/>
-                            <constraint firstAttribute="bottom" secondItem="gWL-3X-0nu" secondAttribute="bottom" id="p6h-Fv-6dM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZMB-H0-8bg"/>
@@ -200,11 +200,11 @@
                         <viewControllerLayoutGuide type="bottom" id="YnD-HZ-S2g"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="d5m-Ts-ldZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="494"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xrL-T1-pdY">
-                                <rect key="frame" x="0.0" y="36" width="375" height="507"/>
+                                <rect key="frame" x="0.0" y="36" width="375" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J4V-7M-y5o">
@@ -238,23 +238,38 @@
             </objects>
             <point key="canvasLocation" x="1269.5999999999999" y="1441.529235382309"/>
         </scene>
-        <!--View Controller-->
+        <!--My Favorites View Controller-->
         <scene sceneID="XgI-wB-PTC">
             <objects>
-                <viewController id="F9U-Gd-e9B" sceneMemberID="viewController">
+                <viewController id="F9U-Gd-e9B" customClass="MyFavoritesViewController" customModule="Rtflx" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qt1-z4-0Zd"/>
                         <viewControllerLayoutGuide type="bottom" id="fey-Hu-zaa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5wM-OC-HHf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="494"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ndr-Vn-idh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="494"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fey-Hu-zaa" firstAttribute="top" secondItem="Ndr-Vn-idh" secondAttribute="bottom" id="50H-cD-ZeE"/>
+                            <constraint firstAttribute="trailing" secondItem="Ndr-Vn-idh" secondAttribute="trailing" id="DIi-zc-fz8"/>
+                            <constraint firstItem="Ndr-Vn-idh" firstAttribute="top" secondItem="Qt1-z4-0Zd" secondAttribute="bottom" id="GeB-l2-cyP"/>
+                            <constraint firstItem="Ndr-Vn-idh" firstAttribute="leading" secondItem="5wM-OC-HHf" secondAttribute="leading" id="MK0-qP-IBl"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="MyFavoritesTableView" destination="Ndr-Vn-idh" id="uhu-Nr-kDO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LdP-RG-7D3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1967" y="1424"/>
+            <point key="canvasLocation" x="1941.5999999999999" y="1441.9790104947526"/>
         </scene>
     </scenes>
     <resources>

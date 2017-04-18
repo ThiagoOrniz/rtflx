@@ -27,6 +27,10 @@
 		AF2CC2B71EA57E590067B33B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2B61EA57E590067B33B /* LoginViewModel.swift */; };
 		AF2CC2B91EA584A50067B33B /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2B81EA584A50067B33B /* MovieDetailsViewController.swift */; };
 		AF2CC2BB1EA589630067B33B /* MovieDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2BA1EA589630067B33B /* MovieDAO.swift */; };
+		AF2CC2BD1EA58DC30067B33B /* MyFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2BC1EA58DC30067B33B /* MyFavoritesViewController.swift */; };
+		AF2CC2BF1EA58DE80067B33B /* MyFavoritesDataSourceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2BE1EA58DE80067B33B /* MyFavoritesDataSourceExtension.swift */; };
+		AF2CC2C11EA58EF20067B33B /* FavoriteMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2C01EA58EF20067B33B /* FavoriteMoviesViewModel.swift */; };
+		AF2CC2C31EA58F9A0067B33B /* FavoriteMoviesFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2C21EA58F9A0067B33B /* FavoriteMoviesFirebase.swift */; };
 		AF59D0CC1E9C52860016D5EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */; };
 		AFD230541EA1A74E00932E54 /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD230531EA1A74E00932E54 /* Movies.storyboard */; };
 		AFEBE6681E9C4EED00A4EC32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */; };
@@ -81,6 +85,10 @@
 		AF2CC2B61EA57E590067B33B /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AF2CC2B81EA584A50067B33B /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		AF2CC2BA1EA589630067B33B /* MovieDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDAO.swift; sourceTree = "<group>"; };
+		AF2CC2BC1EA58DC30067B33B /* MyFavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyFavoritesViewController.swift; path = "Movies/View Controllers/MyFavoritesViewController.swift"; sourceTree = "<group>"; };
+		AF2CC2BE1EA58DE80067B33B /* MyFavoritesDataSourceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyFavoritesDataSourceExtension.swift; path = "Movies/View Controllers/MyFavoritesDataSourceExtension.swift"; sourceTree = "<group>"; };
+		AF2CC2C01EA58EF20067B33B /* FavoriteMoviesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteMoviesViewModel.swift; path = "Movies/View Models/FavoriteMoviesViewModel.swift"; sourceTree = "<group>"; };
+		AF2CC2C21EA58F9A0067B33B /* FavoriteMoviesFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoriteMoviesFirebase.swift; path = Services/FavoriteMoviesFirebase.swift; sourceTree = "<group>"; };
 		AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AFD230531EA1A74E00932E54 /* Movies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Movies.storyboard; path = Movies/Views/Movies.storyboard; sourceTree = "<group>"; };
 		AFEBE6641E9C4EED00A4EC32 /* Rtflx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rtflx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +152,7 @@
 				AF23F55F1E9DCFBD00B07BAF /* DiscoverMoviesFirebase.swift */,
 				AF23F5601E9DCFBD00B07BAF /* RetrieveMovie.swift */,
 				AF2CC2BA1EA589630067B33B /* MovieDAO.swift */,
+				AF2CC2C21EA58F9A0067B33B /* FavoriteMoviesFirebase.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -155,6 +164,8 @@
 				AF23F5691E9DD04600B07BAF /* DiscoverMoviesViewController.swift */,
 				AF23F56A1E9DD04600B07BAF /* MoviesViewController.swift */,
 				AF2CC2B81EA584A50067B33B /* MovieDetailsViewController.swift */,
+				AF2CC2BC1EA58DC30067B33B /* MyFavoritesViewController.swift */,
+				AF2CC2BE1EA58DE80067B33B /* MyFavoritesDataSourceExtension.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -172,6 +183,7 @@
 			children = (
 				AF23F5721E9DD06B00B07BAF /* DiscoverMoviesViewModel.swift */,
 				AF23F5731E9DD06B00B07BAF /* MovieViewModel.swift */,
+				AF2CC2C01EA58EF20067B33B /* FavoriteMoviesViewModel.swift */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -614,18 +626,22 @@
 				AF23F57B1E9DD09600B07BAF /* LoginViewController.swift in Sources */,
 				AF23F5621E9DCFBD00B07BAF /* RetrieveMovie.swift in Sources */,
 				AF23F57F1E9DD0A900B07BAF /* CustomTabBarController.swift in Sources */,
+				AF2CC2C31EA58F9A0067B33B /* FavoriteMoviesFirebase.swift in Sources */,
 				AF23F5741E9DD06B00B07BAF /* DiscoverMoviesViewModel.swift in Sources */,
 				AF23F5861E9DD0DB00B07BAF /* UIImageViewFetcher.swift in Sources */,
 				AF2CC2B91EA584A50067B33B /* MovieDetailsViewController.swift in Sources */,
 				AFEBE6681E9C4EED00A4EC32 /* AppDelegate.swift in Sources */,
 				AF2CC2B71EA57E590067B33B /* LoginViewModel.swift in Sources */,
+				AF2CC2C11EA58EF20067B33B /* FavoriteMoviesViewModel.swift in Sources */,
 				AF23F56B1E9DD04600B07BAF /* DiscoverMoviesDataSourceExtension.swift in Sources */,
 				AF23F5781E9DD08000B07BAF /* Movie.swift in Sources */,
 				AF23F56D1E9DD04600B07BAF /* MoviesViewController.swift in Sources */,
 				AF23F5611E9DCFBD00B07BAF /* DiscoverMoviesFirebase.swift in Sources */,
 				AF23F5751E9DD06B00B07BAF /* MovieViewModel.swift in Sources */,
 				AF2CC2BB1EA589630067B33B /* MovieDAO.swift in Sources */,
+				AF2CC2BF1EA58DE80067B33B /* MyFavoritesDataSourceExtension.swift in Sources */,
 				AF23F5651E9DD02000B07BAF /* MoviesTableViewCell.swift in Sources */,
+				AF2CC2BD1EA58DC30067B33B /* MyFavoritesViewController.swift in Sources */,
 				AF23F56C1E9DD04600B07BAF /* DiscoverMoviesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

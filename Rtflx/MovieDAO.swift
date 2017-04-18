@@ -17,6 +17,10 @@ class MovieDAO {
         if FIRAuth.auth()?.currentUser != nil {
             
             let movieValues = ["rating": movie.rating ?? 3.0,
+                               "title" : movie.title ?? "Unknown",
+                               "genre" : movie.genre ?? "",
+                               "year"  : movie.year ?? 0,
+                               "synopsis":movie.synopsis ?? "",
                               "id": movie.id!] as [String : Any]
             
             FIRDatabase.database().reference().child("userMovies").child((FIRAuth.auth()?.currentUser?.uid)!).child(movie.id!).updateChildValues(movieValues)
