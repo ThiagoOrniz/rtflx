@@ -38,7 +38,7 @@ extension DiscoverMoviesViewController: UITableViewDelegate, UITableViewDataSour
         let storyBoard: UIStoryboard = UIStoryboard(name: "Movies", bundle: nil)
         let movieDetailsVC = storyBoard.instantiateViewController(withIdentifier: "MovieDetailsViewController") as! MovieDetailsViewController
         
-        movieDetailsVC.setupMovieViewModel(movieViewModel: discoverMoviesViewModel.get(index: indexPath.row))
+        movieDetailsVC.setupMovieViewModel(movieViewModel: discoverMoviesViewModel.get(index: indexPath.row),isFromDiscover: true)
         
         self.navigationController?.pushViewController(movieDetailsVC, animated: true)
     }

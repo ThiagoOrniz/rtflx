@@ -40,5 +40,9 @@ class MovieViewModel {
         MovieDAO().saveMovie(movie: movie)
     }
     
+    func removeFromFavorite() {
+        MovieDAO().deleteMovie(movie: movie)
+    }
+    
     
 }

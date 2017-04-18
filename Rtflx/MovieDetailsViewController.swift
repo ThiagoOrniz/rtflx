@@ -18,7 +18,8 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     
-    var movieViewModel: MovieViewModel?
+    private var movieViewModel: MovieViewModel?
+    private var isFromDiscover: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,15 +37,28 @@ class MovieDetailsViewController: UIViewController {
         yearLabel.text = movieViewModel?.year
         //        coverImageView.image = movieViewModel.imageCoverPath
         
+        
+        if isFromDiscover {
+            favoriteButton.setTitle("ADD", for: .normal)
+        } else {
+            favoriteButton.setTitle("REMOVE", for: .normal)
+        }
+        
 
     }
 
-    func setupMovieViewModel(movieViewModel: MovieViewModel) {
+    func setupMovieViewModel(movieViewModel: MovieViewModel, isFromDiscover: Bool) {
         self.movieViewModel = movieViewModel
-        
+        self.isFromDiscover = isFromDiscover
     }
 
     @IBAction func favoriteButtonTouched() {
-        movieViewModel?.saveAsFavorite()
+        
+        if favoriteButton.title(for: .normal) == "ADD" {
+            movieViewModel?.saveAsFavorite()
+        } else {
+            movieViewModel?.removeFromFavorite()
+
+        }
     }
 }

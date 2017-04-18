@@ -36,7 +36,7 @@ extension MyFavoritesViewController: UITableViewDelegate, UITableViewDataSource 
         let storyBoard: UIStoryboard = UIStoryboard(name: "Movies", bundle: nil)
         let movieDetailsVC = storyBoard.instantiateViewController(withIdentifier: "MovieDetailsViewController") as! MovieDetailsViewController
         
-        movieDetailsVC.setupMovieViewModel(movieViewModel: favoriteMoviesViewModel.get(index: indexPath.row))
+        movieDetailsVC.setupMovieViewModel(movieViewModel: favoriteMoviesViewModel.get(index: indexPath.row), isFromDiscover: false)
         
         self.navigationController?.pushViewController(movieDetailsVC, animated: true)
     }

@@ -36,6 +36,22 @@ class MovieDAO {
         }
     }
     
+    
+    func deleteMovie(movie: Movie) {
+        
+        if FIRAuth.auth()?.currentUser != nil {
+            
+            FIRDatabase.database().reference().child("userMovies").child((FIRAuth.auth()?.currentUser?.uid)!).child(movie.id!).setValue(nil)
+            
+            FIRDatabase.database().reference().child("likes").child(movie.id!)
+            .child(((FIRAuth.auth()?.currentUser?.uid)!)).setValue(nil)
+            
+        } else {
+            print("user is not signed in")
+        }
+    }
+
+    
     private func sendPushNotification(movieId: String) {
         print("push notification sent")
     }
