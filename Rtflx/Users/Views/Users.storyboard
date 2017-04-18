@@ -14,7 +14,7 @@
                 <navigationController id="a1L-Vv-KyC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Users" image="ic_placeholder" id="D6q-DI-AHG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cvJ-cY-2ou">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cvJ-cY-2ou">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -76,6 +76,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FlX-Xo-fgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2272.8000000000002" y="712.89355322338838"/>
+        </scene>
+        <!--User Details View Controller-->
+        <scene sceneID="GcM-yd-49A">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailsViewController" id="vge-5G-bVz" customClass="UserDetailsViewController" customModule="Rtflx" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UbZ-gS-VhR"/>
+                        <viewControllerLayoutGuide type="bottom" id="tFD-2E-Q6l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TFD-wy-A71">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASZ-x8-3ed">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9V-kR-PXm">
+                                <rect key="frame" x="16" y="231" width="83" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="UserDetailsViewController" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="121-nY-kmZ">
+                                <rect key="frame" x="273" y="231" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add as friend"/>
+                                <connections>
+                                    <action selector="addButtonTouched" destination="vge-5G-bVz" eventType="touchUpInside" id="Bze-mh-bp3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="121-nY-kmZ" id="4kX-AX-v0i"/>
+                        <outlet property="nameLabel" destination="O9V-kR-PXm" id="gXS-Uo-vBh"/>
+                        <outlet property="userImageView" destination="ASZ-x8-3ed" id="cyr-wD-fEZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VcN-wT-Ui7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2988" y="712.89355322338838"/>
         </scene>
         <!--Discover Users View Controller-->
         <scene sceneID="guM-cI-p5X">

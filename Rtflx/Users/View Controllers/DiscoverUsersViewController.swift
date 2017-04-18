@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DiscoverUsersViewController: UIViewController {
+class DiscoverUsersViewController: UIViewController, DiscoverUsersViewModelHasUpdatedDelegate {
 
     @IBOutlet weak var usersTableView: UITableView!
     
@@ -19,7 +19,14 @@ class DiscoverUsersViewController: UIViewController {
 
         usersTableView.delegate = self
         usersTableView.dataSource = self
+        discoverUsersViewModel.delegate = self
+        
+        usersTableView.rowHeight = UITableViewAutomaticDimension
+        usersTableView.estimatedRowHeight = 115
     }
-
-
+    
+    func discoverUsersViewModelHasUpdated() {
+        usersTableView.reloadData()
+    }
+    
 }

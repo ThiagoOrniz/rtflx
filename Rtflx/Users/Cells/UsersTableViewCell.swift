@@ -15,4 +15,8 @@ class UsersTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var numberOfMoviesAddedLabel: UILabel!
     
+    func populateView(with user: UserViewModel) {
+        nameLabel.text = user.name
+    }
+    
 }

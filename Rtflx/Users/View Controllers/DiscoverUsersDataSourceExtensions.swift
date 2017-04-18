@@ -28,19 +28,19 @@ extension DiscoverUsersViewController: UITableViewDelegate, UITableViewDataSourc
             tableView.register(UINib(nibName: usersIdentifier, bundle: nil), forCellReuseIdentifier: usersIdentifier)
             cell = tableView.dequeueReusableCell(withIdentifier: usersIdentifier) as? UsersTableViewCell
         }
-//        cell?.populateView(with: discoverUsersViewModel.get(index: indexPath.row))
+        cell?.populateView(with: discoverUsersViewModel.get(index: indexPath.row))
         
         return cell!
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Users", bundle: nil)
-//        let userDetailsVC = storyBoard.instantiateViewController(withIdentifier: "UserDetailsViewController") as! MovieDetailsViewController
-//        
-//        userDetailsVC.setupUserViewModel(userViewModel: discoverUsersViewModel.get(index: indexPath.row))
-//        
-//        self.navigationController?.pushViewController(userDetailsVC, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Users", bundle: nil)
+        let userDetailsVC = storyBoard.instantiateViewController(withIdentifier: "UserDetailsViewController") as! UserDetailsViewController
+        
+        userDetailsVC.setupUserViewModel(userViewModel: discoverUsersViewModel.get(index: indexPath.row))
+        
+        self.navigationController?.pushViewController(userDetailsVC, animated: true)
+    }
     
 }

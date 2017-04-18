@@ -8,18 +8,41 @@
 
 import Foundation
 
-class DiscoverUsersViewModel {
+protocol DiscoverUsersViewModelHasUpdatedDelegate{
+    func discoverUsersViewModelHasUpdated()
+}
+
+
+class DiscoverUsersViewModel: FirebaseManagerDelegate {
+    
+    var delegate: DiscoverUsersViewModelHasUpdatedDelegate?
+    
+    
+    private var users = [User]() {
+        didSet {
+            delegate?.discoverUsersViewModelHasUpdated()
+        }
+    }
     
     init() {
-        
+       _ = FirebaseManager.shared
+        FirebaseManager.shared.delegate = self
     }
     
     func count() -> Int {
-        return 1
+        return users.count
     }
     
-//    func get(index: Int) -> UserViewModel {
-//        return UserViewModel(user: users[index])
-//    }
+    func get(index: Int) -> UserViewModel {
+        return UserViewModel(user: users[index])
+    }
+    
+    func didFinishUpdatingUsers(users: [User]) {
+        self.users = users
+    }
+    
+    func didFinishUpdateFriends() {
+        
+    }
     
 }
