@@ -123,6 +123,7 @@
 		AF2CC2E81EA5BED60067B33B /* RegisterMovie.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RegisterMovie.storyboard; path = Movies/Views/RegisterMovie.storyboard; sourceTree = "<group>"; };
 		AF2CC2EA1EA5BFF30067B33B /* RegisterMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterMovieViewController.swift; path = "Movies/View Controllers/RegisterMovieViewController.swift"; sourceTree = "<group>"; };
 		AF2CC2EC1EA5C17D0067B33B /* ColorsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorsExtensions.swift; path = Helpers/ColorsExtensions.swift; sourceTree = "<group>"; };
+		AF2CC2EE1EA6F7950067B33B /* Rtflx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rtflx.entitlements; sourceTree = "<group>"; };
 		AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AFD230531EA1A74E00932E54 /* Movies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Movies.storyboard; path = Movies/Views/Movies.storyboard; sourceTree = "<group>"; };
 		AFEBE6641E9C4EED00A4EC32 /* Rtflx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rtflx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,6 +336,7 @@
 		AF59D0CA1E9C50880016D5EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF2CC2EE1EA6F7950067B33B /* Rtflx.entitlements */,
 				AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */,
 				AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */,
 				AFEBE6731E9C4EED00A4EC32 /* Info.plist */,
@@ -505,6 +507,14 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SVMRB674Q7;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					AFEBE6771E9C4EED00A4EC32 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -896,6 +906,7 @@
 			baseConfigurationReference = 082F22FB4580FF3EA6EDE44C /* Pods-Rtflx.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Rtflx/Rtflx.entitlements;
 				DEVELOPMENT_TEAM = SVMRB674Q7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -916,6 +927,7 @@
 			baseConfigurationReference = 2AD70616EB61574C015B178A /* Pods-Rtflx.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Rtflx/Rtflx.entitlements;
 				DEVELOPMENT_TEAM = SVMRB674Q7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
