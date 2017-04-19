@@ -63,6 +63,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.8)
   - GTMSessionFetcher/Full (1.1.8):
     - GTMSessionFetcher/Core (= 1.1.8)
+  - OneSignal (2.3.5)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -72,6 +73,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - GoogleSignIn
+  - OneSignal (~> 2.0)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -92,8 +94,9 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
+  OneSignal: 4cb42948ebc141bd5deb54d3fda25105db94f6d4
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 7379d3eb8c76b9fcee9117c3e8cc422fe0c78382
+PODFILE CHECKSUM: 77c5876339829de098ac5df070426639f874d2af
 
 COCOAPODS: 1.1.1

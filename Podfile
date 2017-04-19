@@ -13,6 +13,7 @@ pod 'GoogleSignIn'
 pod ‘FBSDKLoginKit’
 pod ‘Alamofire’
 pod ‘SwiftyJSON’
+pod 'OneSignal', '~> 2.0'
 
 
   target 'RtflxTests' do
