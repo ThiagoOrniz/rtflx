@@ -20,6 +20,8 @@ class RegisterMovieViewController: UIViewController {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var synopsisTextView: UITextView!
     @IBOutlet weak var searchMovieButton: UIButton!
+    
+    var movieViewModel = MovieViewModel()
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,15 +46,8 @@ class RegisterMovieViewController: UIViewController {
     }
     
     @IBAction func searchMovieButtonTouched() {
+        movieViewModel.search()
     }
-
+    
 }
 
-
-//Title
-//Genre
-//Synopsis
-//Actors
-//Year
-//Image cover
-//Rating (input manually from user from 0 to 10)

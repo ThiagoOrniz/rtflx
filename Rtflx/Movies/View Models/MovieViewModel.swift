@@ -31,6 +31,10 @@ class MovieViewModel {
     var imageCoverPath: String {
         return movie.imageCover ?? ""
     }
+
+    init() {
+        movie = Movie()
+    }
     
     init(movie: Movie) {
         self.movie = movie
@@ -42,6 +46,10 @@ class MovieViewModel {
     
     func removeFromFavorite() {
         MovieDAO().deleteMovie(movie: movie)
+    }
+    
+    func search() {
+        NetflixAPIService.getMovie(for: "Attack on titan".replacingOccurrences(of: " ", with: "+"))
     }
     
     
