@@ -15,7 +15,7 @@
                 <navigationController id="a1L-Vv-KyC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Users" image="ic_placeholder" id="D6q-DI-AHG"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cvJ-cY-2ou">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="cvJ-cY-2ou">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTW-8l-XY5">
-                                <rect key="frame" x="0.0" y="64" width="190" height="55"/>
+                                <rect key="frame" x="0.0" y="64" width="189.5" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fpu-U0-AbC">
                                         <rect key="frame" x="8" y="17" width="174" height="21"/>
@@ -68,7 +68,7 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfx-qS-wLT">
-                                <rect key="frame" x="190" y="64" width="189" height="55"/>
+                                <rect key="frame" x="189.5" y="64" width="189.5" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yj-nT-UEY">
                                         <rect key="frame" x="8" y="17" width="57" height="21"/>
