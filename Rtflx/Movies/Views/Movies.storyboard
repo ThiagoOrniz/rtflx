@@ -15,7 +15,7 @@
                 <navigationController id="aeo-zS-osI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Movies" image="ic_placeholder" id="b6f-Kz-PBO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dNU-CY-zNr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dNU-CY-zNr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -40,7 +40,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mC7-7M-a7O">
-                                <rect key="frame" x="0.0" y="64" width="188" height="60"/>
+                                <rect key="frame" x="0.0" y="64" width="187.5" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wwn-Ny-FCh">
                                         <rect key="frame" x="8" y="20" width="67" height="21"/>
@@ -56,7 +56,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKP-xB-XTX">
-                                <rect key="frame" x="188" y="64" width="187" height="60"/>
+                                <rect key="frame" x="187.5" y="64" width="187.5" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsH-Qq-WFZ">
                                         <rect key="frame" x="8" y="20" width="97" height="21"/>
