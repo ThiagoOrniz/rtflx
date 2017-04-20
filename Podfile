@@ -14,6 +14,8 @@ pod ‘FBSDKLoginKit’
 pod ‘Alamofire’
 pod ‘SwiftyJSON’
 pod 'OneSignal', '~> 2.0'
+pod 'RxSwift',     '~> 3.0’
+pod 'RxCocoa',     '~> 3.0'
 
 
   target 'RtflxTests' do

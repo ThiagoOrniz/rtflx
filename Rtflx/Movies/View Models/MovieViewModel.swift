@@ -7,13 +7,27 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+
+protocol MovieDataSource {
+    func movieHasUpdated()
+    func hasntIdentifiedAnyMovie()
+}
 
 class MovieViewModel {
     
     private var movie: Movie
     
+    var delegate: MovieDataSource?
+    
     var title: String {
-        return movie.title ?? "Unknown"
+        set {
+            movie.title = newValue
+        }
+        get {
+            return movie.title ?? "Unknown"
+        }
     }
     
     var genre: String {
@@ -28,10 +42,18 @@ class MovieViewModel {
         return movie.year != nil ? "\(movie.year!)" : ""
     }
     
+    var actors: String {
+        return movie.actors ?? ""
+    }
+    
+    var synopsis: String {
+        return movie.synopsis ?? ""
+    }
+    
     var imageCoverPath: String {
         return movie.imageCover ?? ""
     }
-
+    
     init() {
         movie = Movie()
     }
@@ -49,7 +71,20 @@ class MovieViewModel {
     }
     
     func search() {
-        NetflixAPIService.getMovie(for: "Attack on titan".replacingOccurrences(of: " ", with: "+"))
+        if movie.title != nil {
+            NetflixAPIService.getMovie(for: movie.title!.replacingOccurrences(of: " ", with: "+")) { [weak self] (movie) in
+                
+                if movie != nil {
+                    self?.movie = movie!
+                    self?.delegate?.movieHasUpdated()
+                    print(self?.movie)
+                } else {
+                    self?.delegate?.hasntIdentifiedAnyMovie()
+                    print("couldnt retrieve movie")
+                }
+                
+            }
+        }
     }
     
     

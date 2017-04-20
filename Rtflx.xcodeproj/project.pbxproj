@@ -53,6 +53,7 @@
 		AF2CC2F61EA70B750067B33B /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2F51EA70B750067B33B /* UIViewControllerExtensions.swift */; };
 		AF2CC2F81EA7188B0067B33B /* NetflixAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2CC2F71EA7188B0067B33B /* NetflixAPIService.swift */; };
 		AF59D0CC1E9C52860016D5EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */; };
+		AFCF10AE1EA8607E007FDADF /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCF10AD1EA8607E007FDADF /* PreviewViewController.swift */; };
 		AFD230541EA1A74E00932E54 /* Movies.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFD230531EA1A74E00932E54 /* Movies.storyboard */; };
 		AFEBE6681E9C4EED00A4EC32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */; };
 		AFEBE66F1E9C4EED00A4EC32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFEBE66E1E9C4EED00A4EC32 /* Assets.xcassets */; };
@@ -133,6 +134,7 @@
 		AF2CC2F51EA70B750067B33B /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtensions.swift; path = Helpers/UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		AF2CC2F71EA7188B0067B33B /* NetflixAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetflixAPIService.swift; path = Services/NetflixAPIService.swift; sourceTree = "<group>"; };
 		AF59D0CB1E9C52860016D5EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AFCF10AD1EA8607E007FDADF /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewViewController.swift; path = "Movies/View Controllers/PreviewViewController.swift"; sourceTree = "<group>"; };
 		AFD230531EA1A74E00932E54 /* Movies.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Movies.storyboard; path = Movies/Views/Movies.storyboard; sourceTree = "<group>"; };
 		AFEBE6641E9C4EED00A4EC32 /* Rtflx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rtflx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEBE6671E9C4EED00A4EC32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				AF2CC2BC1EA58DC30067B33B /* MyFavoritesViewController.swift */,
 				AF2CC2BE1EA58DE80067B33B /* MyFavoritesDataSourceExtension.swift */,
 				AF2CC2EA1EA5BFF30067B33B /* RegisterMovieViewController.swift */,
+				AFCF10AD1EA8607E007FDADF /* PreviewViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -761,6 +764,7 @@
 				AF23F5781E9DD08000B07BAF /* Movie.swift in Sources */,
 				AF2CC2F81EA7188B0067B33B /* NetflixAPIService.swift in Sources */,
 				AF2CC2EB1EA5BFF30067B33B /* RegisterMovieViewController.swift in Sources */,
+				AFCF10AE1EA8607E007FDADF /* PreviewViewController.swift in Sources */,
 				AF23F56D1E9DD04600B07BAF /* MoviesViewController.swift in Sources */,
 				AF2CC2DD1EA5A3AC0067B33B /* UserDetailsViewController.swift in Sources */,
 				AF23F5611E9DCFBD00B07BAF /* DiscoverMoviesFirebase.swift in Sources */,
