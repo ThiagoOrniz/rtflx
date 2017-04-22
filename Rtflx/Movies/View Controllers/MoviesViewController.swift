@@ -15,14 +15,20 @@ class MoviesViewController: UIViewController {
     @IBOutlet weak var discoverMoviesContainer: UIView!
     @IBOutlet weak var FavoriteMoviesContainer: UIView!
    
+    @IBOutlet weak var favoritesLabel: UILabel!
+    @IBOutlet weak var discoverLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        navigationController?.navigationBar.barTintColor = UIColor.lightGray
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        navigationController?.navigationBar.isHidden = true
+
         discoverTab.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector( discoverTabTapped)))
         
         favoritesTab.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(favoriteTabTapped)))
@@ -31,16 +37,16 @@ class MoviesViewController: UIViewController {
     func favoriteTabTapped() {
         discoverMoviesContainer.isHidden = true
         FavoriteMoviesContainer.isHidden = false
+        favoritesLabel.textColor = UIColor.primaryColor
+        discoverLabel.textColor = UIColor.lightGray
+
     }
     
     func discoverTabTapped() {
         discoverMoviesContainer.isHidden = false
         FavoriteMoviesContainer.isHidden = true
+        discoverLabel.textColor = UIColor.primaryColor
+        favoritesLabel.textColor = UIColor.lightGray
     }
-
-//    override func viewWillDisappear(_ animated: Bool) {
-//        discoverTab.gestureRecognizers?.removeAll()
-//        favoritesTab.gestureRecognizers?.removeAll()
-//    }
 
 }

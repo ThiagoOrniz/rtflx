@@ -10,7 +10,18 @@ import UIKit
 
 extension UIViewController {
     
-    
+    func showDismissAlertMessage(withTitle title:String, andBody body:String) {
+        
+        let alert = UIAlertController(title: title, message: body, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { [weak self] (_) in
+            
+           _ = self?.navigationController?.popViewController(animated: true)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+
     func showOkAlertMessage(withTitle title:String, andBody body:String) {
         
         let alert = UIAlertController(title: title, message: body, preferredStyle: UIAlertControllerStyle.alert)
@@ -20,6 +31,7 @@ extension UIViewController {
     
     func addHideKeyboardWhenTapped() {
         let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapped))
+        tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
     }
     

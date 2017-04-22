@@ -27,24 +27,9 @@ class DiscoverMoviesViewController: UIViewController, DiscoverMoviesViewModelHas
     }
     
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
-        
         discoverMoviesViewModel.sortBy(segmentIndex: sortSegmentControl.selectedSegmentIndex)
-        
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        let movieDetailsViewController = segue.destination as! MovieDetailsViewController
-//        
-//        if let selectedIndexPath = discoverMoviesTableView.indexPathForSelectedRow {
-//            movieDetailViewController.setMovie(discoverMoviesViewModel.get(index: selectedIndexPath.row))
-//        } else {
-//            print ("couldnt get selected item")
-//        }
-//        
-//    }
-    
-
     func discoverMoviesViewModelHasUpdated() {
         discoverMoviesTableView.reloadData()
     }

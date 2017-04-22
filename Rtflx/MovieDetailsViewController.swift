@@ -16,15 +16,18 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var actorsLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
-    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var durationLabel: UILabel!
     
+    @IBOutlet weak var directorLabel: UILabel!
     private var movieViewModel: MovieViewModel?
     private var isFromDiscover: Bool = false
     
+    @IBOutlet weak var ratingImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.isHidden = false
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,19 +35,39 @@ class MovieDetailsViewController: UIViewController {
         
         titleLabel.text = movieViewModel?.title
         genreLabel.text = movieViewModel?.genre
-        //        actorsLabel.text = movieViewModel.actors
-        //        synopsisLabel.text = movieViewModel.synopsis
+        actorsLabel.text = movieViewModel?.actors
+        synopsisLabel.text = movieViewModel?.synopsis
         yearLabel.text = movieViewModel?.year
-        //        coverImageView.image = movieViewModel.imageCoverPath
+        directorLabel.text = movieViewModel?.director
+        durationLabel.text = movieViewModel?.duration
+        coverImageView.fetchImage(forPath: movieViewModel?.imageCoverPath ?? "")
+        ratingImageView.image = UIImage(named: movieViewModel!.rating)
         
         
         if isFromDiscover {
-            favoriteButton.setTitle("ADD", for: .normal)
+            let saveButtomItem = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(MovieDetailsViewController.saveButtonTouched))
+            
+            self.navigationItem.setRightBarButton(saveButtomItem, animated: true)
+            
         } else {
-            favoriteButton.setTitle("REMOVE", for: .normal)
+            let removeButtomItem = UIBarButtonItem(title: "REMOVE", style: .plain, target: self, action: #selector(MovieDetailsViewController.removeButtonTouched))
+            
+            self.navigationItem.setRightBarButton(removeButtomItem, animated: true)
+
         }
         
+    }
 
+    func saveButtonTouched() {
+        
+        movieViewModel?.saveAsFavorite()
+        showDismissAlertMessage(withTitle: "Movie saved!", andBody: "")
+    }
+    
+    func removeButtonTouched() {
+        
+        movieViewModel?.removeFromFavorite()
+        showDismissAlertMessage(withTitle: "Movie removed!", andBody: "")
     }
 
     func setupMovieViewModel(movieViewModel: MovieViewModel, isFromDiscover: Bool) {
@@ -52,13 +75,4 @@ class MovieDetailsViewController: UIViewController {
         self.isFromDiscover = isFromDiscover
     }
 
-    @IBAction func favoriteButtonTouched() {
-        
-        if favoriteButton.title(for: .normal) == "ADD" {
-            movieViewModel?.saveAsFavorite()
-        } else {
-            movieViewModel?.removeFromFavorite()
-
-        }
-    }
 }

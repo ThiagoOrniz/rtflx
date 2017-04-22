@@ -37,6 +37,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
         let userDetailsVC = storyBoard.instantiateViewController(withIdentifier: "UserDetailsViewController") as! UserDetailsViewController
         
         userDetailsVC.setupUserViewModel(userViewModel: friendsViewModel.get(index: indexPath.row))
+        userDetailsVC.isFromFriendList(true)
         
         self.navigationController?.pushViewController(userDetailsVC, animated: true)
     }

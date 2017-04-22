@@ -16,8 +16,8 @@ class DiscoverMoviesFirebase {
         print(startingValue)
         
     FIRDatabase.database().reference().child("movies").queryOrdered(byChild: "title")
-            .observeSingleEvent(of: .value, with: { (snapshot) in
-//            .observe(.value, with: { (snapshot) in
+//            .observeSingleEvent(of: .value, with: { (snapshot) in
+            .observe(.value, with: { (snapshot) in
                 // code
                 var movies = [Movie]()
                 

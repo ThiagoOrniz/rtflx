@@ -63,7 +63,45 @@ class FirebaseManager {
                 }
                 })!
             
+            self?.users = (self?.users.filter { user in
+                return !keys.contains { key in
+                    user.id == key
+                }
+                })!
+            
             self?.friendsDelegate?.didFinishUpdatingFriends(friends: (self?.friends)!)
+            self?.usersDelegate?.didFinishUpdatingUsers(users: (self?.users)!)
+
         }
     }
+    
+    func removeFriend(_ user: User) {
+        
+        if let index = friends.index(where: {(friend) -> Bool in
+            user.id == friend.id
+        }) {
+            friends.remove(at: index)
+            users.append(user)
+            UsersFirebase.removeFriend(user.id!)
+            friendsDelegate?.didFinishUpdatingFriends(friends: friends)
+            usersDelegate?.didFinishUpdatingUsers(users: users)
+        }
+    }
+    
+    func addFriend(_ friend: User) {
+       
+        if let index = users.index(where: {(user) -> Bool in
+            user.id == friend.id
+        }) {
+            users.remove(at: index)
+            friends.append(friend)
+            UsersFirebase.addFriend(friend.id!)
+            friendsDelegate?.didFinishUpdatingFriends(friends: friends)
+            usersDelegate?.didFinishUpdatingUsers(users: users)
+        }
+
+    }
+
+    
+   
 }

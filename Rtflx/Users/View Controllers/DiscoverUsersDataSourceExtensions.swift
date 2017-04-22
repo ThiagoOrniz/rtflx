@@ -40,6 +40,8 @@ extension DiscoverUsersViewController: UITableViewDelegate, UITableViewDataSourc
         
         userDetailsVC.setupUserViewModel(userViewModel: discoverUsersViewModel.get(index: indexPath.row))
         
+        userDetailsVC.isFromFriendList(false)
+        
         self.navigationController?.pushViewController(userDetailsVC, animated: true)
     }
     

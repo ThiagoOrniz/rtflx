@@ -44,7 +44,7 @@ class DiscoverMoviesViewModel {
         case 0:
             movies = movies.sorted(by: {($0.rating ?? 0.0) > ($1.rating ?? 0.0)})
         case 1:
-            movies = movies.sorted(by: {($0.genre ?? "") > ($1.genre ?? "")})
+            movies = movies.sorted(by: {($0.genre ?? "") < ($1.genre ?? "")})
         default:
             break;
         }

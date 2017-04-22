@@ -24,6 +24,13 @@ class MoviesTableViewCell: UITableViewCell {
         durationLabel.text = movieViewModel.duration
         yearLabel.text = movieViewModel.year
         
+        if movieViewModel.hasRating {
+            ratingImageView.isHidden = false
+        } else {
+            ratingImageView.isHidden = true
+        }
+        
+        ratingImageView.image = UIImage(named: movieViewModel.rating)
         thumbnailImageView.fetchImage(forPath: movieViewModel.imageCoverPath)
     }
     

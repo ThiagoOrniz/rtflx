@@ -14,23 +14,56 @@ class UserDetailsViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
     
-    private var userViewModel: UserViewModel?
+    @IBOutlet weak var emailLabel: UILabel!
+    private var userViewModel = UserViewModel()
     
+    private var isFriend = false
+    
+    @IBOutlet weak var moviesTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        addButton.layer.cornerRadius = 5
+        addButton.setBorderShadow(shadowOpacity: 0.7)
+        
     }
-    
+  
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        nameLabel.text = userViewModel?.name
+        navigationController?.navigationBar.isHidden = false
+
+        nameLabel.text = userViewModel.name
+        emailLabel.text = userViewModel.email
+        
+        if isFriend {
+            addButton.setTitle("Remove", for: .normal)
+        } else {
+            addButton.setTitle("Add as Friend", for: .normal)
+        }
     }
     
     func setupUserViewModel(userViewModel: UserViewModel) {
         self.userViewModel = userViewModel
     }
+    
+    func isFromFriendList(_ fromFriendsList: Bool) {
+        if fromFriendsList {
+            isFriend = true
+        } else {
+            isFriend = false
+        }
+    }
 
     @IBAction func addButtonTouched() {
         
+        if isFriend {
+            userViewModel.removeFriendship()
+            addButton.setTitle("Add as Friend", for: .normal)
+
+        } else {
+            userViewModel.addAsFriend()
+            addButton.setTitle("Remove", for: .normal)
+
+        }
     }
 }

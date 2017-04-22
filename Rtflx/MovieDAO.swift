@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseDatabase
 import FirebaseAuth
+import OneSignal
 
 class MovieDAO {
 
@@ -16,20 +17,30 @@ class MovieDAO {
         
         if FIRAuth.auth()?.currentUser != nil {
             
-            let movieValues = ["rating": movie.rating ?? 3.0,
-                               "title" : movie.title ?? "Unknown",
-                               "genre" : movie.genre ?? "",
-                               "year"  : movie.year ?? 0,
-                               "synopsis":movie.synopsis ?? "",
-                              "id": movie.id!] as [String : Any]
+            var movieValues = [String : Any]()
             
-            FIRDatabase.database().reference().child("userMovies").child((FIRAuth.auth()?.currentUser?.uid)!).child(movie.id!).updateChildValues(movieValues)
+            movieValues["rating"] = movie.rating ?? 5.0
+            movieValues["title"] = movie.title ?? "Unknown"
+            movieValues["genre"] = movie.genre ?? ""
+            movieValues["year"] = movie.year ?? 0
+            movieValues["synopsis"] = movie.synopsis ?? ""
+            movieValues["imageCover"] = movie.imageCover ?? ""
+            movieValues["duration"] = movie.duration ?? ""
+            movieValues["actors"] = movie.actors ?? ""
+            movieValues["director"] = movie.director ?? ""
+            movieValues["id"] = movie.id!
+
+            FIRDatabase.database() .reference().child("userMovies").child((FIRAuth.auth()?.currentUser?.uid)!).child(movie.id!).updateChildValues(movieValues)
+            
+            FIRDatabase.database().reference().child("movies").child(movie.id!).updateChildValues(movieValues)
             
             let likesValue = [(FIRAuth.auth()?.currentUser?.uid)!: true]
             
             FIRDatabase.database().reference().child("likes").child(movie.id!).updateChildValues(likesValue)
             
-            sendPushNotification(movieId: movie.id!)
+
+            
+            sendPushNotification(movieTitle: movie.title ?? "")
 
         } else {
             print("user is not signed in")
@@ -52,7 +63,14 @@ class MovieDAO {
     }
 
     
-    private func sendPushNotification(movieId: String) {
+    private func sendPushNotification(movieTitle: String) {
+
+        
+//        OneSignal postNotification(["contents": ["en": "Test Message"], "include_player_ids": ["3009e210-3166-11e5-bc1b-db44eb02b120"]])
+
+        
+      
+        
         print("push notification sent")
     }
 }

@@ -21,9 +21,14 @@ extension UIImageView {
                     
                     if let imageData = contentOfURL {
                         self?.image = UIImage(data: imageData as Data)
+                    } else {
+                        self?.image = UIImage(named: "ic_popcorn_placeholder")
                     }
                 }
             }
+        } else {
+            self.image = UIImage(named: "ic_popcorn_placeholder")
         }
     }
 }
+

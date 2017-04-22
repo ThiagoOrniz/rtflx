@@ -17,8 +17,10 @@ class UsersFirebase {
     func retrieveUsers( completion: @escaping (_ users: [User]) -> Void) -> FIRDatabaseHandle  {
        
         FIRDatabase.database().reference().child("users")
-            .observe(.value, with: { (snapshot) in
-                
+            .observeSingleEvent(of: .value, with: { (snapshot) in
+
+//            .observe(.value, with: { (snapshot) in
+        
                 var users = [User]()
                 
                 if let valueDictionary = snapshot.value as? NSDictionary {
@@ -33,7 +35,10 @@ class UsersFirebase {
 //                            let photo
                         
                             let user = User(id: uid!, name: name!, email: email ?? "")
-                            users.append(user)
+                            
+                            if user.id != (FIRAuth.auth()?.currentUser?.uid)! {
+                                users.append(user)
+                            }
                             
                         }
                         
@@ -53,8 +58,10 @@ class UsersFirebase {
         
         FIRDatabase.database().reference().child("friendships")
             .child((FIRAuth.auth()?.currentUser?.uid)!)
-            .observe(.value, with: { (snapshot) in
-                
+            .observeSingleEvent(of: .value, with: { (snapshot) in
+
+//            .observe(.value, with: { (snapshot) in
+        
                 var keys = [String]()
                 
                 if let valueDictionary = snapshot.value as? NSDictionary {
@@ -72,6 +79,16 @@ class UsersFirebase {
         }
 
         return 1
+    }
+    
+    class func removeFriend(_ uid: String) {
+        
+        FIRDatabase.database() .reference().child("friendships").child((FIRAuth.auth()?.currentUser?.uid)!).child(uid).setValue(nil)
+        
+    }
+    
+    class func addFriend(_ uid: String) {
+        FIRDatabase.database() .reference().child("friendships").child((FIRAuth.auth()?.currentUser?.uid)!).child(uid).setValue(true)
     }
     
     

@@ -12,12 +12,32 @@ class UserViewModel {
     
     private var user: User
     
+    var isFriend: Bool {
+        return false
+    }
+    
     var name: String {
-        return user.name
+        return user.name ?? ""
+    }
+    
+    var email: String {
+        return user.email ?? ""
     }
     
     init(user: User) {
         self.user = user
+    }
+    
+    init() {
+        self.user = User()
+    }
+    
+    func removeFriendship() {
+       FirebaseManager.shared.removeFriend(user)
+    }
+
+    func addAsFriend() {
+        FirebaseManager.shared.addFriend(user)
     }
     
 }

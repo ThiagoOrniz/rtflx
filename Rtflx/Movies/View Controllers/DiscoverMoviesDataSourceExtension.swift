@@ -43,16 +43,15 @@ extension DiscoverMoviesViewController: UITableViewDelegate, UITableViewDataSour
         self.navigationController?.pushViewController(movieDetailsVC, animated: true)
     }
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
-        let currentOffset = scrollView.contentOffset.y
-        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
-        
-        if maximumOffset - currentOffset <= 20.0 { //20 is the limit to bottom
-            print("-------Bottom-------")
-            discoverMoviesViewModel.loadMovies()
-        }
-    }
-
+//    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+//        
+//        let currentOffset = scrollView.contentOffset.y
+//        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+//        
+//        if maximumOffset - currentOffset <= 20.0 { //20 is the limit to bottom
+//            print("-------Bottom-------")
+//            discoverMoviesViewModel.loadMovies()
+//        }
+//    }
     
 }
