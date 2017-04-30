@@ -12,6 +12,7 @@ import GoogleSignIn
 import FBSDKCoreKit
 import FirebaseAuth
 import OneSignal
+import SwiftyBeaver
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let console = ConsoleDestination()
+        SwiftyBeaver.addDestination(console)
+        
+        let platform = SBPlatformDestination(appID: "1P9A7R",
+                                             appSecret: "I5BbjwW8dR6eccycvPn38hqd8wtgGtxl",
+                                             encryptionKey: "gujomoweaeslmQwm1hrmadidbaidMjgA")
+        
+
+        SwiftyBeaver.addDestination(platform)
+        
         
         //Add this line. Replace '5eb5a37e-b458-11e3-ac11-000c2940e62c' with your OneSignal App ID.
         OneSignal.initWithLaunchOptions(launchOptions, appId: "fbd05838-44e2-485a-8915-41e356715c0e")

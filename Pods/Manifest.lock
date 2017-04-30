@@ -67,6 +67,7 @@ PODS:
   - RxCocoa (3.1.0):
     - RxSwift (~> 3.1)
   - RxSwift (3.1.0)
+  - SwiftyBeaver (1.1.1)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -79,6 +80,7 @@ DEPENDENCIES:
   - OneSignal (~> 2.0)
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
+  - SwiftyBeaver
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -102,8 +104,9 @@ SPEC CHECKSUMS:
   OneSignal: 4cb42948ebc141bd5deb54d3fda25105db94f6d4
   RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
+  SwiftyBeaver: 2b68694df862381235e32bcfc4ec991e26bf131d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 304ac173495e6307ddb88bcc22df9a954ef6ae2f
+PODFILE CHECKSUM: d467712a5f67f4f9b5577194f93928bec505e3d3
 
 COCOAPODS: 1.1.1
