@@ -37,7 +37,7 @@ class FavoriteMoviesViewModel {
     
     func loadFavoriteMovies() {
         
-        _ = FavoriteMoviesFirebase.retrieveMovies( completion:{ [weak self] (movies) in
+        _ = FavoriteMoviesFirebase.retrieveMovies(for: nil, completion:{ [weak self] (movies) in
             
             self?.movies = movies
             print(movies)

@@ -12,10 +12,17 @@ import FirebaseAuth
 
 class FavoriteMoviesFirebase {
     
-    class func retrieveMovies( completion: @escaping (_ movies: [Movie]) -> Void) -> FIRDatabaseHandle {
+    class func retrieveMovies(for userId: String?, completion: @escaping (_ movies: [Movie]) -> Void) -> FIRDatabaseHandle {
         
+        var uid = ""
+        if userId == nil {
+            uid = (FIRAuth.auth()?.currentUser?.uid)!
+        } else {
+            uid = userId!
+        }
+       
         FIRDatabase.database().reference().child("userMovies")
-            .child((FIRAuth.auth()?.currentUser?.uid)!)
+            .child(uid)
             .observe(.value, with: { (snapshot) in
               
                 var movies = [Movie]()

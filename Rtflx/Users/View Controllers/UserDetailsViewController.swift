@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserDetailsViewController: UIViewController {
+class UserDetailsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,FavoriteMoviesViewModelHasUpdatedDelegate {
 
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
@@ -19,12 +19,17 @@ class UserDetailsViewController: UIViewController {
     
     private var isFriend = false
     
-    @IBOutlet weak var moviesTableView: UITableView!
+    @IBOutlet weak var moviesCollection: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addButton.layer.cornerRadius = 5
         addButton.setBorderShadow(shadowOpacity: 0.7)
+        
+        moviesCollection.delegate = self
+        moviesCollection.dataSource = self
+        userViewModel.delegate = self
         
     }
   
@@ -65,5 +70,33 @@ class UserDetailsViewController: UIViewController {
             addButton.setTitle("Remove", for: .normal)
 
         }
+    }
+    //
+    
+    //
+    //
+    //
+    func numberOfSections(in collectionView: UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return userViewModel.count()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
+        
+        cell.populateView(with: userViewModel.get(index: indexPath.row))
+
+        return cell
+    }
+    
+    func favoriteMoviesViewModelHasUpdated() {
+        moviesCollection.reloadData()
     }
 }

@@ -26,6 +26,7 @@ class UserViewModel {
     
     init(user: User) {
         self.user = user
+        loadFavoriteMovies()
     }
     
     init() {
@@ -39,5 +40,37 @@ class UserViewModel {
     func addAsFriend() {
         FirebaseManager.shared.addFriend(user)
     }
+    
+    
+    var delegate: FavoriteMoviesViewModelHasUpdatedDelegate?
+    
+    private var movies = [Movie]() {
+        didSet {
+            delegate?.favoriteMoviesViewModelHasUpdated()
+        }
+    }
+    
+    func count() -> Int {
+        return movies.count
+    }
+    
+    func get(index: Int) -> MovieViewModel {
+        return MovieViewModel(movie: movies[index])
+    }
+    
+    
+    func loadFavoriteMovies() {
+        
+        
+        _ = FavoriteMoviesFirebase.retrieveMovies(for: user.id, completion:{ [weak self] (movies) in
+            
+            self?.movies = movies
+            print(movies)
+        })
+        
+        
+    }
+
+    
     
 }
