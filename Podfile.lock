@@ -6,6 +6,7 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - BRYXBanner (0.7.1)
   - FBSDKCoreKit (4.18.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.18.0):
@@ -72,6 +73,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - BRYXBanner
   - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
@@ -86,6 +88,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  BRYXBanner: 34eabf9c6c009f187948ca78a4f3bba3767d0f04
   FBSDKCoreKit: 15fef8804a4629f98c6f4e55e81a76c9d725d85e
   FBSDKLoginKit: 6773073e970b2b15fb12e451ce7f11da0532b880
   Firebase: 53b2343db1ebfa3eb16bdb4318b8bb65360b2220
@@ -107,6 +110,6 @@ SPEC CHECKSUMS:
   SwiftyBeaver: 2b68694df862381235e32bcfc4ec991e26bf131d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: d467712a5f67f4f9b5577194f93928bec505e3d3
+PODFILE CHECKSUM: 1fa4f238c59e31bc7bac85bfc09c7ab0b92f3a50
 
 COCOAPODS: 1.1.1

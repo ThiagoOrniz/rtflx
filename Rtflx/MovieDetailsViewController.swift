@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BRYXBanner
 
 class MovieDetailsViewController: UIViewController {
 
@@ -61,6 +62,11 @@ class MovieDetailsViewController: UIViewController {
     func saveButtonTouched() {
         
         movieViewModel?.saveAsFavorite()
+        
+        let banner = Banner(title: "Movie successfuly saved!", subtitle:"", image: UIImage(named: "Icon"), backgroundColor: UIColor.primaryColor)
+        banner.dismissesOnTap = true
+        banner.show(duration: 1.5)
+        
         showDismissAlertMessage(withTitle: "Movie saved!", andBody: "")
     }
     
