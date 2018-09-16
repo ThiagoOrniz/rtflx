@@ -1,34 +1,22 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '10.0'
+use_frameworks!
+
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
 
 target 'Rtflx' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for Rtflx
-pod 'Firebase/Core'
-pod 'Firebase/Auth'
-pod 'Firebase/Database'
-pod 'GoogleSignIn'
-pod ‘FBSDKLoginKit’
-pod ‘Alamofire’
-pod ‘SwiftyJSON’
-pod 'OneSignal', '~> 2.0'
-pod 'RxSwift',     '~> 3.0’
-pod 'RxCocoa',     '~> 3.0'
-pod 'SwiftyBeaver'
-pod 'BRYXBanner'
-
-
-
-  target 'RtflxTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'RtflxUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+  pod ‘Alamofire’
+  pod 'SDWebImage'
+  pod 'IQKeyboardManagerSwift'
+  pod 'JVFloatLabeledTextField'
+  pod 'Moya/RxSwift'
+  pod 'AlamofireObjectMapper'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+# pod 'SwiftyBeaver'
+  pod 'BRYXBanner'
+  pod 'SVProgressHUD'
 end
